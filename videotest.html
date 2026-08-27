@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="/engine.js" defer></script>
+    <script src="/achivements.js" ></script>
+    <meta name="view-transition" content="same-origin" />
+    <link href="/transitions.css" rel="stylesheet" type="text/css">
+    <script src="/transitions.js"></script>
+    <script src="videoengine.js"></script>
+    <link rel="stylesheet" href="videostyle.css">
+    <script src="sounds.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video testing - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <picture id="mainTitle">
+      <source srcset="TITLE.webp" type="image/webp">
+      <img src="https://assets-thenonfun.neocities.org/TITLE.png" class="gctr" alt="Title" id="titleImg">
+    </picture>
+
+    <div id="videoContainer" class="video-container">
+      <div id="loadingIndicator" class="loading-spinner">
+        <img src="https://assets-thenonfun.neocities.org/assets/videoplayer/loading.png" alt="Loading...">
+      </div>
+      
+      <div id="debugOverlay" class="debug-overlay" style="display: none;">
+        <button id="closeDebugBtn" class="debug-close-btn">&times;</button>
+        <div class="debug-row"><strong>Video ID / Content:</strong> <span id="debugVideoId">testvidsite.mp4</span></div>
+        <div class="debug-row"><strong>Viewport / Frames:</strong> <span id="debugResolution">0x0 / 0 dropped</span></div>
+        <div class="debug-row"><strong>Current Time / Duration:</strong> <span id="debugTime">0.00 / 0.00</span></div>
+        <div class="debug-row"><strong>Volume / Muted:</strong> <span id="debugVolume">100% / false</span></div>
+        <div class="debug-row"><strong>Buffer Health:</strong> <span id="debugBuffer">0.00s</span></div>
+      </div>
+
+      <video id="myVideo" loop playsinline>
+        <source src="https://files.mgytr.top/thefun/testvidsite.mp4" type="video/mp4">
+        Your browser does not support HTML5 playback.
+      </video>
+      
+      <div class="custom-controls">
+        <div id="progressContainer" class="progress-container">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div class="controls-row">
+          <div class="left-controls">
+            <button id="playBtn" class="player-btn" title="Play/Pause">▶</button>
+            <button id="muteBtn" class="player-btn" title="Mute/Unmute">
+              <img id="muteIcon" src="https://assets-thenonfun.neocities.org/images/videoplayerassets/icons/audioON.png" alt="Volume">
+            </button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="1" class="volume-slider" title="Volume">
+          </div>
+          <div class="right-controls">
+            <button id="fsBtn" class="player-btn" title="Fullscreen">⛶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <p><a href="/" class="white-link">Go back to main page</a></p>
+    <br>
+    <script src="/achivements.js"></script>
+  </body>
+</html>

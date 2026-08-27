@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="/engine.js" defer></script>
+    <script src="/achivements.js" ></script>
+  <link href="/transitions.css" rel="stylesheet" type="text/css">
+<script src="/transitions.js"></script>
+    <script src="sounds.js"></script>
+<script src="/achivements.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socials - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+<style>
+  .map-selection-container {    
+    text-align: center;    
+    padding: 20px 0;    
+    max-width: 900px;    
+    margin: 0 auto;  
+  }
+  .map-card {    
+    display: inline-block;    
+    vertical-align: top;    
+    width: 260px;    
+    margin: 10px;    
+    background-color: #242424;     
+    border: 2px solid #3d3d3d;    
+    text-align: left;    
+    font-family: Tahoma, Verdana, sans-serif;    
+    position: relative;  
+  }
+  .map-card:hover {    
+    border-color: #ff9d00;   
+  }
+  .map-header {    
+    background-color: #3d3d3d;    
+    padding: 5px 10px;    
+    font-size: 11px;    
+    color: #999;    
+    text-transform: uppercase;  
+  }
+  .map-body {    
+    padding: 15px;    
+    height: 85px;  
+  }
+  .map-name {    
+    display: block;    
+    font-size: 16px;    
+    font-weight: bold;    
+    color: #ff9d00;     
+    text-decoration: none;    
+    margin-bottom: 5px;  
+  }
+  .map-name:hover {    
+    text-decoration: underline;  
+  }
+  .map-info {    
+    font-size: 12px;    
+    color: #cccccc;    
+    line-height: 1.4;  
+  } 
+  .map-desc {    
+    font-size: 10px;    
+    color: #cccccc;    
+    line-height: 1.4;    
+    text-align: center;  
+  }  
+  .map-tag {    
+    color: #666;  
+  }
+
+  /* --- NEW RULE FOR THE NOTE --- */
+  #noteContainer {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    cursor: pointer;
+    
+    z-index: 10;
+  }
+</style>
+<div class="map-selection-container">
+    <picture id="mainTitle">      
+    <source srcset="images/signsocials.webp" type="image/webp">      
+    <img src="https://assets-thenonfun.neocities.org/images/signsocials.png" class="gctr" alt="Title" id="titleImg">    
+  </picture>
+  
+    <h1>watch more of the shitty stuff i make</h1>
+    <p>Find me here:</p>
+    <div class="map-card">
+    <div class="map-header">youtube.com/@ThenonFun</div>
+    <div class="map-body">
+      <a href="https://www.youtube.com/@ThenonFun" class="map-name">YouTube</a>
+      <br>
+    <div class="map-desc">I barely post here anymore sadly</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">steamcommunity.com/id/ThenonFun/</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/id/ThenonFun/" class="map-name">Steam Profile</a>
+            <br>
+    <div class="map-desc">I post all my big projects here</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">x.com/Thenonfun</div>
+    <div class="map-body">
+      <a href="https://x.com/Thenonfun" class="map-name">Twitter</a>
+
+                <br>
+    <div class="map-desc">I yell at everyone here</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">thenonfun</div>
+    <div class="map-body">
+      <a href="/discord" class="map-name">Discord profile</a>
+
+       <br>
+    <div class="map-desc">Talk to me</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">last.fm/user/ThenonFun</div>
+    <div class="map-body">
+      <a href="https://www.last.fm/user/ThenonFun" class="map-name">last.fm profile</a>
+             <br>
+    <div class="map-desc">if Mozart had a last.fm profile</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">bandcamp.com/thenonfun</div>
+    <div class="map-body">
+            <a href="https://www.bandcamp.com/thenonfun" class="map-name">Bandcamp profile</a>
+                   <br>
+    <div class="map-desc">if Mozart had a Bandcamp profile</div>
+    </div>
+  </div>
+  </div>
+<picture id="noteContainer" title="Click to discard">
+    <source srcset="images/note.webp" type="image/webp">
+    <img src="https://assets-thenonfun.neocities.org/images/note.png" 
+         class="gctr" 
+         id="noteImgAsset">
+</picture>
+    <!-- COPYRIGHT INFO STARTS HERE-->
+        <p><a href="index" class="white-link">Go back to main page</a></p>
+    <p>© 2026 The Fun</p>
+    <p><a href="legal" class="legal">Legal Disclaimer</a></p>
+<script>
+  document.getElementById('noteContainer').addEventListener('click', function() {
+    var note = this;
+    
+    // 1. Apply the fluttering animation
+    note.classList.add('note-dropped');
+    
+    // 2. Grant the achievement
+    if (typeof unlockAchievement === 'function') {
+        unlockAchievement('note'); 
+    }
+
+    // 3. Remove from DOM after animation finishes
+    setTimeout(function() {
+      if (note.parentNode) {
+        note.parentNode.removeChild(note);
+      }
+    }, 2500); 
+  });
+</script>
+  </body>
+</html>

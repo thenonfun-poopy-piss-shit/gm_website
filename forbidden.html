@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://thenonfun.neocities.org/sounds.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website not available.</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    
+    <picture id=mainTitle>
+      <source srcset="/signerror.webp" type="image/webp">
+      <img src="https://assets-thenonfun.neocities.org/signerror.png" class="gctr" alt="Error">
+    </picture>
+    
+    <div class="error-details">
+      <h1 class="error-heading">403</h1>
+      <h2>Forbidden</h2>
+      <p>The page you're currently trying to access is forbidden.</p>
+      <p>Get out and stay out.</p>
+        
+
+      <code>ERR_PAGE:NOTALLOWED</code>     
+    </div>
+    
+    <p><a href="https://thenonfun.neocities.org">Go back to the homepage</a></p>
+    
+    <p>© 2026 The Fun.</p>
+    <p><a href="https://thenonfun.neocities.org/legal" class="legal">Legal Disclaimer</a></p>
+    <!-- <p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p> -->
+     <script src="/achivements.js"></script>
+    <script>
+      (function() {
+          // Trigger achievement
+          try {
+              if (typeof unlockAchievement === "function") {
+                  unlockAchievement('error_403');
+              }
+          } catch(err) {
+              console.warn("Achievement system failed to load.");
+          }
+      })();
+    </script>
+  </body>
+</html>

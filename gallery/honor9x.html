@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honor 9X Gallery - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="https://thenonfun.neocities.org/images/favicon.ico">
+    <link rel="stylesheet" href="https://thenonfun.neocities.org/style.css">
+    <script src="https://thenonfun.neocities.org/transitions.js" defer></script>
+    <link href="https://thenonfun.neocities.org/transitions.css" rel="stylesheet" type="text/css">
+    <script src="https://thenonfun.neocities.org/sounds.js" defer></script>
+    
+    <style>
+          /*THIS IS FOR EDGEHTML18*/
+      dialog:not([open]) {
+    display: none !important;
+}
+.gallery-controls {
+    max-width: 1100px;
+    margin: 20px auto 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: monospace;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.gallery-controls label {
+    margin-right: 8px;
+}
+
+.gallery-controls select {
+    background-color: #222;
+    color: #FFA500;
+    border: 1px solid #333;
+    padding: 6px 12px;
+    font-family: monospace;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.gallery-controls select:hover,
+.gallery-controls select:focus {
+    border-color: #FFA500;
+}
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .gallery-card {
+            background-color: #222;
+            border: 1px solid #333;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            position: relative; 
+        }
+        .gallery-card:hover {
+            transform: scale(1.02);
+            border-color: #FFA500;
+        }
+        .gallery-card:focus {
+    outline: none;
+    box-shadow: none;
+}
+.gallery-card:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+        .gallery-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border: 1px solid #000;
+            background-color: #111; 
+        }
+        .gallery-card-title {
+            font-size: 13px;
+            color: #cccccc;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .video-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        #image-overlay {
+            border: none;
+            background: transparent;
+            padding: 0;
+            margin: auto; 
+            max-width: 100vw;
+            max-height: 100vh;
+            overflow: visible;
+        }
+        #image-overlay::backdrop {
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(3px); 
+        }
+        #lightbox-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+        #fullscreen-image {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            display: none; 
+        }
+
+        #image-meta-panel {
+            width: 100%;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-top: none;
+            padding: 15px;
+            box-sizing: border-box;
+            color: #cccccc;
+            font-family: monospace;
+            font-size: 13px;
+        }
+        #meta-title {
+            color: #FFA500;
+            font-weight: bold;
+            margin: 0 0 8px 0;
+            font-size: 16px;
+            font-family: "Tahoma", sans-serif;
+        }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 8px;
+        }
+        .meta-item span { color: #fff; }
+                
+        .hl2-loader-img {
+            width: 240px;      
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        #global-loader {
+            display: block; /* Visible by default so it shows instantly */
+            text-align: center;
+            margin: 40px auto;
+            font-family: monospace;
+        }
+        #global-loader p {
+            color: #FFA500;
+            margin-top: 10px;
+        }
+        #lightbox-loader {
+            display: none;
+            margin: 60px auto; 
+        }
+
+        .video-container {
+            position: relative;
+            width: 640px;
+            max-width: 100%;
+            background: #000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            margin: 0 auto; 
+            display: none;
+        }
+
+        .video-container video {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            display: block;
+            cursor: pointer;
+        }
+
+        .debug-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(28, 28, 28, 0.85);
+            color: #ffffff;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 11px;
+            padding: 10px;
+            border-radius: 2px;
+            z-index: 10; 
+            width: 260px;
+            pointer-events: auto;
+            text-align: left;
+        }
+
+        .debug-row {
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .debug-row strong {
+            color: #aaaaaa;
+        }
+
+        .debug-close-btn {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 0;
+        }
+        .debug-close-btn:hover {
+            color: #ff0000;
+        }
+
+        .custom-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%; 
+            box-sizing: border-box; 
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            padding: 8px 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2147483647;
+        }
+
+        .video-container:hover .custom-controls {
+            opacity: 1;
+        }
+
+        .controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 6px;
+            width: 100%; 
+        }
+
+        .left-controls, .right-controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .player-btn {
+            background: #ff9900;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            margin-right: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 12px;    
+            min-width: 32px;
+            height: 24px;         
+            box-sizing: border-box; 
+            vertical-align: middle;
+        }
+
+        #muteBtn {
+            padding: 0 !important; 
+            width: 32px;           
+            text-align: center;
+        }
+
+        #muteIcon {
+            width: 14px !important;       
+            height: 14px !important;      
+            max-width: 14px !important;
+            max-height: 14px !important;
+            display: inline-block !important;
+            vertical-align: middle;       
+            margin: 0 auto !important;
+            border: none;
+            pointer-events: none;         
+        }
+
+        .player-btn:hover {
+            background: #ffaa22;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #444;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #ff9900;
+        }
+
+        .volume-slider {
+            -webkit-appearance: none;
+            width: 80px;
+            background: #444;
+            height: 6px;
+            outline: none;
+            cursor: pointer;
+            margin-left: 4px;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 14px;
+            background: #ff9900;
+            cursor: pointer;
+        }
+
+        .volume-slider::-ms-thumb {
+            width: 10px;
+            height: 14px;
+            background: #ff9900;
+            border: none;
+            cursor: pointer;
+        }
+
+        .volume-slider::-ms-fill-lower {
+            background: #ff9900;
+        }
+        .volume-slider::-ms-fill-upper {
+            background: #444;
+        }
+
+        .loading-spinner {
+            display: none; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%); 
+            z-index: 100;
+            pointer-events: none; 
+        }
+
+        .loading-spinner img {
+            max-width: 100px; 
+            height: auto;
+            display: block;
+        }
+
+        #videoContainer:-ms-fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            display: block !important;
+            background: #000 !important;
+        }
+        #videoContainer:-ms-fullscreen video {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        #videoContainer:fullscreen,
+        #videoContainer:-webkit-full-screen {
+            background: #000 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        #videoContainer:fullscreen video,
+        #videoContainer:-webkit-full-screen video {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            max-height: none !important;
+            margin: 0 auto; 
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+     <picture id="mainTitle">
+    <source srcset="https://thenonfun.neocities.org/images/signgallery.webp" type="image/webp">
+    <img src="https://assets-thenonfun.neocities.org/TITLE.png" class="gctr" alt="Title" id="titleImg">
+</picture>
+    <h1>Honor 9X Gallery</h1>
+    <div class="wiki-banner">
+     <div class="wiki-banner-icon">
+                    <img src="https://thenonfun.neocities.org/images/wiki/genassets/wikialert.webp" alt="Notice" style="width: 100%; height: auto; display: block;">
+                        </div>
+        <div class="wiki-banner-text">
+            <h4>LOSSY IMAGES & OPTIMIZATION</h4>
+            <p>These images are stored in a Lossy .WebP format. If you want the uncompressed original .JPG/.DNG files, send an email to me.</p>
+        </div>
+    </div>
+    
+    <div id="global-loader">
+        <img src="https://thenonfun.neocities.org/images/assets/tfgui/loading.png" alt="Loading..." class="hl2-loader-img">
+        <p>Reading JSON...</p>
+    </div>
+    <div class="gallery-controls">
+    <label for="sortOrder">Sort by: </label>
+    <select id="sortOrder" onchange="sortGallery(this.value)">
+        <option value="newest" selected>Newest to Oldest</option>
+        <option value="oldest">Oldest to Newest</option>
+    </select>
+</div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+    
+    <dialog id="image-overlay" onclick="if(event.target === this) closeLightbox(event)">
+        <div id="lightbox-container">
+            <img id="lightbox-loader" src="https://thenonfun.neocities.org/images/assets/tfgui/loading.png" alt="Loading..." class="hl2-loader-img">
+            
+            <img id="fullscreen-image" src="" alt="Expanded View">
+            
+            <div id="videoContainer" class="video-container">
+                <div id="loadingIndicator" class="loading-spinner">
+                    <img src="https://thenonfun.neocities.org/images/assets/tfgui/loading.png" alt="Loading...">
+                </div>
+                
+                <div id="debugOverlay" class="debug-overlay" style="display: none;">
+                    <button id="closeDebugBtn" class="debug-close-btn">&times;</button>
+                    <div class="debug-row"><strong>Video ID / Content:</strong> <span id="debugVideoId">-</span></div>
+                    <div class="debug-row"><strong>Viewport / Frames:</strong> <span id="debugResolution">0x0 / 0 dropped</span></div>
+                    <div class="debug-row"><strong>Current Time / Duration:</strong> <span id="debugTime">0.00 / 0.00</span></div>
+                    <div class="debug-row"><strong>Volume / Muted:</strong> <span id="debugVolume">100% / false</span></div>
+                    <div class="debug-row"><strong>Buffer Health:</strong> <span id="debugBuffer">0.00s</span></div>
+                </div>
+
+                <video id="myVideo" loop playsinline>
+                    <source src="" type="video/mp4">
+                    Your browser does not support HTML5 playback.
+                </video>
+                
+                <div class="custom-controls">
+                    <div id="progressContainer" class="progress-container">
+                        <div id="progressBar" class="progress-bar"></div>
+                    </div>
+                    <div class="controls-row">
+                        <div class="left-controls">
+                            <button id="playBtn" class="player-btn" title="Play/Pause">▶</button>
+                            <button id="muteBtn" class="player-btn" title="Mute/Unmute">
+                                <img id="muteIcon" src="https://assets-thenonfun.neocities.org/images/videoplayerassets/icons/audioON.png" alt="Volume">
+                            </button>
+                            <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="1" class="volume-slider" title="Volume">
+                        </div>
+                        <div class="right-controls">
+                            <button id="fsBtn" class="player-btn" title="Fullscreen">⛶</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="image-meta-panel">
+                <h4 id="meta-title">Media Title</h4>
+                <div class="meta-grid">
+                    <div class="meta-item">Resolution: <span id="meta-res">-</span></div>
+                    <div class="meta-item">Format: <span id="meta-fmt">-</span></div>
+                    <div class="meta-item">Location: <span id="meta-loc">-</span></div>
+                    <div class="meta-item">Date/Time: <span id="meta-date">-</span></div>
+                    <div class="meta-item">Shot in RAW: <span id="meta-raw">-</span></div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    
+    <p style="text-align: center;"><a href="https://thenonfun.neocities.org/gallery/" class="white-link">Go back to Gallery</a></p>
+     <p>© 2026 The Fun.</p>
+        <p><a href="https://thenonfun.neocities.org/legal" class="legal">Legal Disclaimer</a></p>
+        <script>
+        //EDGEHTML18 SHIM
+document.addEventListener("DOMContentLoaded", function() {
+    var overlay = document.getElementById('image-overlay');
+    
+    if (overlay && typeof overlay.showModal !== 'function') {
+        window.isLegacyDialog = true; 
+        
+        overlay.showModal = function() {
+            this.setAttribute('open', 'true');
+            this.open = true; 
+            
+            this.style.display = 'flex'; 
+            this.style.position = 'fixed';
+            this.style.top = '0';
+            this.style.left = '0';
+            this.style.width = '100vw';
+            this.style.height = '100vh';
+            this.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            this.style.zIndex = '99999';
+            this.style.margin = '0';
+            this.style.padding = '0';
+            this.style.border = 'none';
+            this.style.justifyContent = 'center';
+            this.style.alignItems = 'center';
+        };
+
+        overlay.close = function() {
+            this.removeAttribute('open');
+            this.open = false;
+            this.style.display = 'none';
+            
+            var closeEvent = document.createEvent('Event');
+            closeEvent.initEvent('close', false, false);
+            this.dispatchEvent(closeEvent);
+        };
+    }
+});
+</script>
+    <script>
+    document.addEventListener('fullscreenchange', () => {
+        if (!document.fullscreenElement) {
+            if (typeof myContainer !== 'undefined' && myContainer) {
+                myContainer.classList.remove('is-fullscreen');
+            }
+        }
+    });
+
+    // Host CONFIG base
+    const BACKUP_BASE = "https://files.mgytr.top/thefun/pixel7a/"; //OUTDATED DO NOT USE
+    const PRIMARY_BASE = "https://raw.githubusercontent.com/thenonfun-poopy-piss-shit/gm_website-assets/refs/heads/main/"; //MAIN, DO USE
+    const PLACEHOLDER_IMG = "https://thenonfun.neocities.org/images/placeholder.webp"; //ERROR MESSAGE
+
+    let galleryData = [];
+
+    function parseGalleryDate(datetimeStr) {
+        if (!datetimeStr || datetimeStr === '?') return 0;
+        const cleanStr = datetimeStr.trim();
+        const parts = cleanStr.split(' ');
+        
+        const dateParts = parts[0].split('-');
+        if (dateParts.length !== 3) return 0;
+
+        const year = parseInt(dateParts[0], 10);
+        const month = parseInt(dateParts[1], 10) - 1;
+        const day = parseInt(dateParts[2], 10);
+
+        let hours = 0;
+        let minutes = 0;
+
+        if (parts[1]) {
+            const timeParts = parts[1].replace('.', ':').split(':');
+            hours = parseInt(timeParts[0], 10) || 0;
+            minutes = parseInt(timeParts[1], 10) || 0;
+        }
+
+        return new Date(year, month, day, hours, minutes).getTime();
+    }
+
+    function sortGallery(order) {
+        if (!galleryData || galleryData.length === 0) return;
+
+        galleryData.sort((a, b) => {
+            const dateA = parseGalleryDate(a.datetime);
+            const dateB = parseGalleryDate(b.datetime);
+
+            if (dateA === 0 && dateB === 0) return 0;
+            if (dateA === 0) return 1;
+            if (dateB === 0) return -1;
+
+            if (order === 'oldest') {
+                return dateA - dateB;
+            } else {
+                return dateB - dateA;
+            }
+        });
+
+        renderGallery(galleryData);
+    }
+
+    async function loadGallery(prefix) {
+        const loader = document.getElementById('global-loader');
+        const grid = document.getElementById('galleryGrid');
+
+        if (loader) loader.style.display = 'block';
+        if (grid) grid.innerHTML = ''; 
+
+        try {
+            const response = await fetch('gallery.json');
+            const allData = await response.json();
+
+            galleryData = prefix 
+                ? allData.filter(item => item.id.startsWith(prefix)) 
+                : allData;
+
+            const sortSelect = document.getElementById('sortOrder');
+            const currentSort = sortSelect ? sortSelect.value : 'newest';
+            sortGallery(currentSort);
+
+        } catch (error) {
+            console.error("Error loading gallery metadata JSON:", error);
+            if (grid) grid.innerHTML = '<p style="color: red; text-align: center; grid-column: 1 / -1;">Error loading gallery data.</p>';
+        } finally {
+            if (loader) loader.style.display = 'none';
+        }
+    }
+
+    function renderGallery(items) {
+        const grid = document.getElementById('galleryGrid');
+        if (!grid) return;
+
+        grid.innerHTML = ''; 
+
+        if (items.length === 0) {
+            grid.innerHTML = '<p style="color: #ccc; text-align: center; grid-column: 1 / -1;">No media found for this device yet!</p>';
+            return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        items.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'gallery-card';
+            card.onclick = () => openLightbox(item.id);
+
+            let imageSrc = (item.thumbnail && item.thumbnail.trim() !== "") 
+                ? item.thumbnail 
+                : `thumb_${item.filename}`;
+
+            if (item.type === 'video') {
+                imageSrc = imageSrc.replace(/\.mp4$/i, '.webp');
+            }
+
+            const videoBadge = item.type === 'video' ? '<div class="video-badge">▶ VIDEO</div>' : '';
+            card.innerHTML = `
+                ${videoBadge}
+                <img src="${PRIMARY_BASE}${imageSrc}" 
+                     alt="${item.title}" 
+                     loading="lazy" 
+                     onerror="if(this.src !== '${BACKUP_BASE}${imageSrc}') { this.src='${BACKUP_BASE}${imageSrc}'; } else { this.src='${PLACEHOLDER_IMG}'; }">
+                <div class="gallery-card-title">${item.title}</div>
+            `;
+            fragment.appendChild(card);
+        });
+
+        grid.appendChild(fragment);
+    }
+
+    let scrollPosition = 0;
+    
+    function openLightbox(id) {
+        const item = galleryData.find(p => p.id === id);
+        if (!item) return;
+
+        const overlay = document.getElementById('image-overlay');
+        const fullImg = document.getElementById('fullscreen-image');
+        const videoContainer = document.getElementById('videoContainer');
+        const fullVid = document.getElementById('myVideo');
+        const lightboxLoader = document.getElementById('lightbox-loader');
+        const debugVideoId = document.getElementById('debugVideoId');
+
+        if (lightboxLoader) lightboxLoader.style.display = 'block';
+
+        if (fullImg) fullImg.style.display = 'none';
+        if (videoContainer) videoContainer.style.display = 'none';
+        if (fullVid) {
+            fullVid.pause();
+        }
+
+        if (item.type === 'video') {
+            if (videoContainer && fullVid) {
+                
+                if (debugVideoId) debugVideoId.innerText = item.filename;
+
+                fullVid.onloadeddata = function() {
+                    if (lightboxLoader) lightboxLoader.style.display = 'none';
+                    videoContainer.style.display = 'block';
+                };
+
+                fullVid.onerror = function() {
+                    if (this.src !== `${BACKUP_BASE}${item.filename}`) {
+                        console.warn(`Primary video failed. Trying backup: ${item.filename}`);
+                        this.src = `${BACKUP_BASE}${item.filename}`;
+                        this.play().catch(err => console.log("Autoplay blocked:", err));
+                    } else {
+                        if (lightboxLoader) lightboxLoader.style.display = 'none';
+                    }
+                };
+
+                fullVid.src = `${PRIMARY_BASE}${item.filename}`;
+                fullVid.load();
+                fullVid.play().then(() => {
+                    const playBtn = document.getElementById("playBtn");
+                    if (playBtn) playBtn.innerHTML = "⏸"; 
+                }).catch(err => console.log("Autoplay blocked or interrupted:", err));
+            }
+        } else {
+            if (fullImg) {
+                fullImg.onload = function() {
+                    if (lightboxLoader) lightboxLoader.style.display = 'none';
+                    fullImg.style.display = 'block';
+                };
+
+                fullImg.onerror = function() {
+                    if (this.src !== `${BACKUP_BASE}${item.filename}`) {
+                        console.warn(`Primary image failed. Trying backup: ${item.filename}`);
+                        this.src = `${BACKUP_BASE}${item.filename}`;
+                    } else {
+                        this.src = PLACEHOLDER_IMG;
+                    }
+                };
+
+                fullImg.src = `${PRIMARY_BASE}${item.filename}`;
+            }
+        }
+
+        document.getElementById('meta-title').innerText = item.title || "Untitled";
+        document.getElementById('meta-res').innerText = item.resolution || "-";
+        document.getElementById('meta-fmt').innerText = item.format || "-";
+        document.getElementById('meta-loc').innerText = item.location || "-";
+        document.getElementById('meta-date').innerText = item.datetime || "-";
+        document.getElementById('meta-raw').innerText = item.raw ? "Yes (Shot in DNG, edited in Photoshop afterwards)" : "No (Straight JPG)";
+
+       if (overlay && !overlay.open) {
+            scrollPosition = window.scrollY || window.pageYOffset; 
+            
+            if (window.isLegacyDialog) {
+                window.scrollTo(0, 0);
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.position = 'fixed';
+                document.body.style.top = `-${scrollPosition}px`;
+                document.body.style.width = '100%';
+            }
+            
+            overlay.showModal();
+        }
+      }
+    function closeLightbox(event) {
+        const overlay = document.getElementById('image-overlay');
+        if (overlay && overlay.open) {
+            overlay.close();
+        }
+    }
+
+document.getElementById('image-overlay').addEventListener('close', function() {
+        const fullVid = document.getElementById('myVideo');
+        const playBtn = document.getElementById("playBtn");
+
+        if (fullVid) {
+            fullVid.pause();
+            fullVid.currentTime = 0;
+        }
+        if (playBtn) {
+            playBtn.innerHTML = "▶"; //TODO, change to an actual image instead
+        }
+        
+        if (window.isLegacyDialog) {
+            document.body.style.overflow = '';
+        } else {
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+        }
+        
+        window.scrollTo(0, scrollPosition);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        loadGallery('HON9X_');
+    //CODE ON WHAT DEVICE TO GRAB FROM
+    //This value controls what each page displays, and from what device
+    //it basically just dictates to the script on what to show from the json file, decided by the induvidual id starter.
+    //Current ones are
+    //PXL_ = Google Pixel 7a
+    //WP930_ = Nokia Lumia 930
+    //N82_ = Nokia N82
+    //HON9X_ = Honor 9X
+    //CANON1_ and CANON2_ for the canon cameras
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var container = document.getElementById("videoContainer");
+        var video = document.getElementById("myVideo");
+        var playBtn = document.getElementById("playBtn");
+        var muteBtn = document.getElementById("muteBtn");
+        var muteIcon = document.getElementById("muteIcon");
+        var fsBtn = document.getElementById("fsBtn");
+        var progressContainer = document.getElementById("progressContainer");
+        var progressBar = document.getElementById("progressBar");
+        var volumeSlider = document.getElementById("volumeSlider");
+        var loadingIndicator = document.getElementById("loadingIndicator");
+
+        var debugOverlay = document.getElementById("debugOverlay");
+        var closeDebugBtn = document.getElementById("closeDebugBtn");
+        var debugResolution = document.getElementById("debugResolution");
+        var debugTime = document.getElementById("debugTime");
+        var debugVolume = document.getElementById("debugVolume");
+        var debugBuffer = document.getElementById("debugBuffer");
+        var debugInterval;
+
+        var audioOnSrc = "https://assets-thenonfun.neocities.org/images/videoplayerassets/icons/audioON.png";
+        var audioOffSrc = "https://assets-thenonfun.neocities.org/images/videoplayerassets/icons/audioOFF.png";
+
+        function togglePlay() {
+            if (!video || !playBtn) return;
+            if (video.paused) {
+                video.play();
+                playBtn.innerHTML = "⏸"; 
+            } else {
+                video.pause();
+                playBtn.innerHTML = "▶"; 
+            }
+        }
+
+        if (playBtn) { playBtn.addEventListener("click", togglePlay); }
+        if (video) { video.addEventListener("click", togglePlay); }
+
+        if (muteBtn && video) {
+            muteBtn.addEventListener("click", function() {
+                if (video.muted) {
+                    video.muted = false;
+                    if (muteIcon) muteIcon.src = audioOnSrc;
+                    if (volumeSlider) volumeSlider.value = video.volume;
+                } else {
+                    video.muted = true;
+                    if (muteIcon) muteIcon.src = audioOffSrc;
+                    if (volumeSlider) volumeSlider.value = 0;
+                }
+            });
+        }
+
+        function handleVolumeChange() {
+            if (!video || !volumeSlider) return;
+            video.volume = volumeSlider.value;
+            if (video.volume === 0) {
+                video.muted = true;
+                if (muteIcon) muteIcon.src = audioOffSrc;
+            } else {
+                video.muted = false;
+                if (muteIcon) muteIcon.src = audioOnSrc;
+            }
+        }
+
+        if (volumeSlider) {
+            volumeSlider.addEventListener("input", handleVolumeChange);
+            volumeSlider.addEventListener("change", handleVolumeChange); 
+        }
+
+        function updateProgressBar() {
+            if (video && progressBar && video.duration) {
+                var percentage = (video.currentTime / video.duration) * 100;
+                progressBar.style.width = percentage + "%";
+            }
+        }
+
+        if (video) {
+            video.addEventListener("timeupdate", updateProgressBar);
+            video.addEventListener("seeking", updateProgressBar);
+            video.addEventListener("seeked", updateProgressBar);
+        }
+
+        if (progressContainer && video) {
+            progressContainer.addEventListener("click", function(e) {
+                var containerWidth = progressContainer.offsetWidth;
+                var clickX = e.offsetX;
+                if (video.duration) {
+                    video.currentTime = (clickX / containerWidth) * video.duration;
+                    updateProgressBar(); 
+                }
+            });
+        }
+
+        if (fsBtn && container) {
+            fsBtn.addEventListener("click", function() {
+                if (!document.fullscreenElement && 
+                    !document.msFullscreenElement && 
+                    !document.webkitFullscreenElement) {
+                    if (container.requestFullscreen) {
+                        container.requestFullscreen();
+                    } else if (container.msRequestFullscreen) {
+                        container.msRequestFullscreen();
+                    } else if (container.webkitRequestFullscreen) {
+                        container.webkitRequestFullscreen();
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    }
+                }
+            });
+        }
+
+        function forceTridentReflow() {
+            if (video) {
+                var currentDisplay = video.style.display;
+                video.style.display = 'none';
+                video.offsetHeight; 
+                video.style.display = currentDisplay;
+            }
+        }
+
+        document.addEventListener("fullscreenchange", forceTridentReflow);
+        document.addEventListener("msfullscreenchange", forceTridentReflow);
+        document.addEventListener("webkitfullscreenchange", forceTridentReflow);
+
+        if (video && loadingIndicator) {
+            video.addEventListener("waiting", function() { loadingIndicator.style.display = "block"; });
+            video.addEventListener("playing", function() { loadingIndicator.style.display = "none"; });
+            video.addEventListener("seeking", function() { loadingIndicator.style.display = "block"; });
+            video.addEventListener("seeked", function() { loadingIndicator.style.display = "none"; });
+            video.addEventListener("canplay", function() { loadingIndicator.style.display = "none"; });
+        }
+
+        function updateDebugStats() {
+            if (!video || !debugOverlay || debugOverlay.style.display === "none") return;
+
+            var width = video.videoWidth || 0;
+            var height = video.videoHeight || 0;
+            var droppedFrames = 0;
+            if (video.webkitDroppedFrameCount) {
+                droppedFrames = video.webkitDroppedFrameCount;
+            } else if (video.msDroppedFrameCount) {
+                droppedFrames = video.msDroppedFrameCount; 
+            }
+            if (debugResolution) {
+                debugResolution.innerHTML = width + "x" + height + " / " + droppedFrames + " dropped";
+            }
+
+            if (debugTime) {
+                debugTime.innerHTML = video.currentTime.toFixed(2) + " / " + (video.duration || 0).toFixed(2);
+            }
+
+            if (debugVolume) {
+                var volPercent = Math.round(video.volume * 100);
+                debugVolume.innerHTML = volPercent + "% / " + (video.muted ? "true" : "false");
+            }
+
+            if (debugBuffer) {
+                var bufferLen = 0;
+                var targetTime = video.currentTime;
+                for (var i = 0; i < video.buffered.length; i++) {
+                    if (targetTime >= video.buffered.start(i) && targetTime <= video.buffered.end(i)) {
+                        bufferLen = video.buffered.end(i) - targetTime;
+                        break;
+                    }
+                }
+                debugBuffer.innerHTML = bufferLen.toFixed(2) + "s";
+            }
+        }
+
+        if (container) {
+            container.addEventListener("contextmenu", function(e) {
+                e.preventDefault(); 
+                if (debugOverlay) {
+                    if (debugOverlay.style.display === "none") {
+                        debugOverlay.style.display = "block";
+                        debugInterval = setInterval(updateDebugStats, 250);
+                    } else {
+                        debugOverlay.style.display = "none";
+                        clearInterval(debugInterval);
+                    }
+                }
+            });
+        }
+
+        if (closeDebugBtn) {
+            closeDebugBtn.addEventListener("click", function(e) {
+                e.stopPropagation(); 
+                if (debugOverlay) {
+                    debugOverlay.style.display = "none";
+                    clearInterval(debugInterval);
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

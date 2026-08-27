@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/engine.js" defer></script>
+    <script src="/achivements.js"></script>
+    <meta name="view-transition" content="same-origin" />
+    <link href="/transitions.css" rel="stylesheet" type="text/css">
+    <script src="/transitions.js"></script>
+    <script src="sounds.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style>
+      .guestbook-iframe-box {
+        background-color: #1a1a1a;
+        border: 1px solid #333;
+        border-left: 5px solid #FFA500;
+        padding: 10px;
+        margin: 20px 0;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 2px 2px 5px rgba(0,0,0,0.3);
+      }
+      .load-chat-btn {
+        background-color: #FFA500;
+        color: #1a1a1a;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.2s;
+      }
+      .load-chat-btn:hover {
+        background-color: #e69500;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <picture id="mainTitle">
+        <source srcset="https://thenonfun.neocities.org/images/signguestbook.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/signguestbook.png" class="gctr" alt="Title" id="titleImg">
+    </picture>
+
+    <div class="blog-container">
+        <h1>Dumpster writing, the voice of the people!</h1>
+        
+        <div class="wiki-content">
+            <div class="wiki-banner">
+                <div class="wiki-banner-icon">
+                    <img src="https://thenonfun.neocities.org/images/wiki/genassets/wikialert.webp" alt="Notice" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div class="wiki-banner-text">
+                    <h4>GENERAL DECENCY</h4>
+                    <p>Any messages that imply any kind of racism, threats, or homo/trans/xenophobia will be deleted. The same goes for general stupidity and spam. Use common sense, and don't be that one guy.</p>
+                </div>
+            </div>
+
+            <div class="guestbook-iframe-box" id="guestbook-container" style="text-align: center; padding-bottom: 30px;">
+                <button class="load-chat-btn" onclick="loadGuestbook()">Load Guestbook</button>
+                <p style="font-size: 12px; margin-top: 15px; color: #ccc;">
+                    By clicking 'Load Guestbook', you agree to Cbox's cookie and privacy policies, along with Neocities TOS. <b>See this sites legal page for more details.</b> This setting will be saved.<br>
+                </p>
+            </div>
+            
+         <script>
+            function loadGuestbook() {
+                var container = document.getElementById("guestbook-container");
+                container.innerHTML = '<iframe src="https://www5.cbox.ws/box/?boxid=965071&boxtag=CkyEVM" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" style="border: 1px solid #111;"></iframe>';
+                container.style.padding = "0"; 
+                
+                // Save the user's consent in their browser
+                localStorage.setItem("chatConsentGiven", "true");
+            }
+
+            // Check if they already gave consent on a previous visit
+            document.addEventListener("DOMContentLoaded", function() {
+                if (localStorage.getItem("chatConsentGiven") === "true") {
+                    loadGuestbook();
+                }
+            });
+            </script>
+        </div>
+        
+        <br>
+
+    </div>
+        <p><a href="/" class="white-link">Go back to main page</a></p>
+        <p>© 2026 The Fun.</p>
+        <p><a href="legal" class="legal">Legal Disclaimer</a></p>
+  </body>
+</html>

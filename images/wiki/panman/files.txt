@@ -1,0 +1,13 @@
+DIRECTORY OF /images/wiki/panman
+------------------ 
+[FILE] borat.webp 
+[FILE] dav0r.webp 
+[FILE] dumbass.webp 
+[FILE] faceless.webp 
+[FILE] hl2adv.webp 
+[FILE] jam.webp 
+[FILE] panman.webp 
+[FILE] terry.webp 
+[FILE] wapple.webp 
+------------------ 
+END OF LIST 

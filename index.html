@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- man i REALLY hate the HTML code comment sign dude why does it gotta be all that -->
+<!-- gm_website, Codename "TriMess" by ThenonFun 2025 to 2026.-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - gm_website</title>
+    <meta name="description" content="The Fun's Personal site and blog.">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="sounds.js" defer></script>
+    <link href="/transitions.css" rel="stylesheet" type="text/css">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <script src="/transitions.js" defer></script>
+    <script src="/achivements.js" defer></script>
+    <script src="/savefileengine.js" defer></script>
+</head>
+<body>
+<!-- not actually sure if this element is even needed? however ill just keep it in just incase. -->
+    <div id="onScreenConsole"></div>
+
+    <picture id="mainTitle">
+    <source srcset="images/TITLE.webp" type="image/webp">
+    <img src="https://assets-thenonfun.neocities.org/TITLE.png" class="gctr" alt="Title" id="titleImg"> <!-- for non .webp capable browsers -->
+</picture>
+<div id="mainHudContainer">
+<!-- splash text, defaults to just a normal "welcome" if engine.js fails to load or in settings the splashes are disabled -->
+    <h1 id="splashText" >Welcome!</h1>
+    <div>
+        <p>Creations:</p>
+        <p><a href="https://thenonfun.neocities.org/sourcemaps">Source Engine Maps</a></p>
+        <p><a href="https://thenonfun.neocities.org/gallery">Photography</a></p>
+        <p><a href="https://thenonfun.neocities.org/wiki/wiki.html">Wiki</a></p>          
+        <p>Community/Links:</p>
+        <p><a href="https://thenonfun.neocities.org/socialmedia">Socials</a></p>
+        <p><a href="https://thenonfun.neocities.org/guestbook.html">Guestbook</a></p>
+        <p><a href="https://thenonfun.neocities.org/blog/blog.html">Blog</a></p>
+        <p>Other:</p>
+        <p><a href="https://thenonfun.neocities.org/tech">Hardware</a></p>
+        <p><a href="https://thenonfun.neocities.org/achivements.html">Achievements</a></p>
+    </div>
+</div>
+
+    <!-- options menu starts here -->
+
+    <p><a href="javascript:void(0)" onclick="toggleSettings(true)">Options</a></p>
+
+    <div id="settingsModal" class="source-modal" >
+        <div class="source-header" id="modalHeader">
+            <span>Options</span>
+            <button class="close-btn" onclick="toggleSettings(false)">×</button>
+        </div>
+<!-- tabs here -->
+        <div class="source-tabs">
+            <div class="source-tab-item active" id="tab-site" onclick="switchTab(&#39;site&#39;)">Site</div>
+            <div class="source-tab-item" id="tab-about" onclick="switchTab(&#39;about&#39;)">About</div>
+            <div class="source-tab-item" id="tab-credits" onclick="switchTab(&#39;credits&#39;)">Credits</div>
+            <div class="source-tab-item" id="tab-client" onclick="switchTab(&#39;client&#39;)" style="display: none;">Client</div>
+            <div class="source-tab-item" id="tab-dev" onclick="switchTab(&#39;dev&#39;)" style="display: none;">Console</div>
+        </div>
+<!-- site settings menu here-->
+        <div class="source-body">
+            <div id="content-site" class="tab-content active">
+    <p style="margin-top:0; color:#f5d042; font-weight:bold;">Site Settings</p>
+<!-- settings sub menu selectors -->
+    <div style="display: flex; gap: 5px; margin-bottom: 15px; border-bottom: 1px solid #444; padding-bottom: 10px;">
+        <button class="source-btn" onclick="switchSiteSub('general')" id="subbtn-general" style="border: 1px solid #f5d042; color: #f5d042;">General</button>
+        <button class="source-btn" onclick="switchSiteSub('splashes')" id="subbtn-splashes">Splashes</button>
+        <button class="source-btn" onclick="switchSiteSub('advanced')" id="subbtn-advanced">Advanced</button>
+    </div>
+<!-- settings sub menu general here -->
+    <div id="sub-general" style="display: block;">
+        <div class="setting-row">
+            <input type="checkbox" id="muteSoundsToggle">
+            <label for="muteSoundsToggle">Mute UI Sounds</label>
+            <span class="tooltip">Mute hover and click sounds across the website</span>
+        </div>
+        <div class="setting-row">
+            <input type="checkbox" id="disableTransitionsToggle">
+            <label for="disableTransitionsToggle">Disable Page Transitions</label>
+            <span class="tooltip">Turns off the sliding animations between pages</span>
+        </div>
+        <div class="setting-row">
+            <input type="checkbox" id="disableTeapot">
+            <label for="disableTeapot">Disable the teapot</label>
+            <span class="tooltip tooltip-up">Would you like some tea?</span>
+        </div>
+    </div>
+<!-- settings sub menu splashes here -->
+    <div id="sub-splashes" style="display: none;">
+        <div class="setting-row">
+            <input type="checkbox" id="disableSplashesToggle">
+            <label for="disableSplashesToggle">Disable Splash Texts</label>
+            <span class="tooltip">Disables random splash texts and shows the default welcome message</span>
+        </div>
+        <div class="setting-row">
+    <input type="checkbox" id="filterSplashesToggle">
+    <label for="filterSplashesToggle">Filter Inappropriate Splashes</label>
+    <span class="tooltip">Hides splashes that might raise eyebrows in public</span>
+</div>
+
+        <div class="setting-row">
+            <label for="blockedSplashLines">Blocked Splashes (Line #s)</label>
+            <input type="text" id="blockedSplashLines" placeholder="e.g. 4, 12, 42" style="background: #222; border: 1px solid #444; color: #fff; font-family: 'Lucida Console', monospace; padding: 2px 4px; outline: none; margin-left: 10px; width: 120px;">
+            <span class="tooltip">Comma-separated list of line numbers in splashes.txt to never show</span>
+        </div>
+        <div class="setting-row">
+            <label for="forcedSplashLine">Force Splash Line</label>
+            <input type="number" id="forcedSplashLine" min="0" placeholder="0" style="background: #222; border: 1px solid #444; color: #fff; font-family: 'Lucida Console', monospace; padding: 2px 4px; outline: none; margin-left: 10px; width: 50px;">
+            <span class="tooltip tooltip-up">Force the site to ALWAYS load this specific line number (0 to disable)</span>
+        </div>
+    </div>
+<!-- settings sub menu advanced here -->
+    <div id="sub-advanced" style="display: none;">
+        <div class="setting-row">
+            <input type="checkbox" id="muteWarnings">
+            <label for="muteWarnings">Suppress compatibility alerts</label>
+            <span class="tooltip">Stop compatibility alerts on the site.</span>
+        </div>
+        <div class="setting-row">
+            <input type="checkbox" id="devModeToggle">
+            <label for="devModeToggle">Developer Output</label>
+            <span class="tooltip tooltip-up">Enable console output to the top left of the screen</span>
+        </div>
+        <button class="source-btn" onclick="exportSaveData()">Export Save</button>
+<button class="source-btn" onclick="importSaveData()">Import Save</button>
+        <hr style="border: 0; border-top: 1px solid #555; margin: 12px 0 8px 0;">
+<div style="text-align: center;">
+    <button class="source-btn" onclick="clearAllSiteData()" style="border-color: #883333; color: #ff6666;">Clear All Saved Data</button>
+    <p style="font-size: 10px; color: #888; margin: 5px 0 0 0;">Wipes all settings and achievements. Cannot be undone.</p>
+</div>
+    </div>
+</div>
+<!-- credits screen here -->
+<div id="creditsContent" class="tab-content" style="display:none;">
+    <h3 style="margin-top:0; color: #f5d042; text-transform: ;">Credits</h3>
+    <ul style="list-style: none; padding: 0; margin: 15px 0; color: #bbb; font-size: 13px; line-height: 1.6;">
+        <li><strong style="color: #fff;">The Fun</strong> - Site Creator</li>
+            <hr style="border: 0; border-top: 1px solid #444; margin: 15px 0;">
+          <p style="font-size: 13px; color: #eee;">Assets Created with</p>
+    
+    <ul style="list-style: none; padding: 0; margin: 15px 0; color: #bbb; font-size: 13px; line-height: 1.6;">
+        <li><strong style="color: #fff;">Adobe Photoshop 2026</strong>
+        </li><li><strong style="color: #fff;">Garry's Mod</strong>
+        </li><li><strong style="color: #fff;">HLMV++</strong> 
+    </li></ul>
+        <hr style="border: 0; border-top: 1px solid #444; margin: 15px 0;">
+    <p style="font-size: 13px; color: #eee;">Special thanks to these gents.</p>
+    
+    <ul style="list-style: none; padding: 0; margin: 15px 0; color: #bbb; font-size: 13px; line-height: 1.6;">
+        <li><strong style="color: #fff;">panman</strong> - Created miscellaneous assets</li>
+        <li><strong style="color: #fff;">mgytr</strong> - Allowing me to host assets on their server</li>
+        <li><strong style="color: #fff;">VALVe</strong> - Achievement SFX, UI SFX</li>
+        <li><strong style="color: #fff;">FamFamFam</strong> - Silk icon pack</li>
+    </ul>
+
+    <hr style="border: 0; border-top: 1px solid #444; margin: 15px 0;">
+    
+    <p style="font-size: 9px; color: #888;">
+special fuck you to each and every chromium browser for giving me more pain than fucking internet explorer with getting transitions to work correctly <br> <!-- this actually happened too -->
+<br>    </p>
+    <p style="font-size: 12px; color: #888;">
+                Thanks for visiting this Website!
+                Hope you had fun here. <br> <!-- just kidding you sux #ROASTED -->
+        -The Fun, 2025 - 2026 </p>
+ 
+</ul></div>
+                        <!-- about menu starts here -->
+            <div id="content-about" class="tab-content">
+                <div class="about-container">
+                    <img src="images/faviconHIGH.gif" class="about-img" alt="Square"> <!-- behold, one of the rare cases of a gif thats actually used on the site, i might change it to smth else (not the file format the image) -->
+                    <div>
+                        <p style="margin-top:0; font-weight:bold;">gm_website "TriMess"</p>
+                        <p style="font-size:11px; line-height:1.4; color:#bbb;">
+                            Build: <span id="siteBuildNum">ERR:VERSION_CANTFETCH</span><br> <!-- CC DATA HERE -->
+                            © 2025-2026 The Fun.<br><br>
+                            The Fun's personal website. Mostly just a fun HTML project and nothing else.<br><br>
+                              <a href="https://thenonfun.neocities.org/email" class="source-link" rel="noopener noreferrer">Send an email to me</a> l<!-- i just use the "l" letter as a devider, should probably actually use the real letter needed but whatever it works soooo -->
+                        <a href="https://thenonfun.neocities.org/ERRORLIST.txt" class="source-link" target="_blank" rel="noopener noreferrer">List of errors</a>
+                        </p>
+                        <!-- 88 x 31 here -->
+                                                    <div style="text-align: center;">
+                                                    <hr class="emblem-divider">
+   <div class="emblem-container" title="Click to get code for embeds">
+        <img src="/images/gmwebsitebadge.gif" alt="gm_website" id="siteEmblem" width="88" height="31">
+        <span id="copyFeedback" class="copy-feedback">Copied!</span>
+    </div>
+                      
+
+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--next two are only visible when developer output is on -->
+                                    <!-- client info menu starts here -->
+            <div id="content-client" class="tab-content">
+                <p style="margin-top:0; color:#f5d042; font-weight:bold;">Client Info</p>
+                <div id="clientInfoContainer" style="font-family:'Lucida Console','Courier New',monospace; font-size:11px; color:#bbb; line-height:1.8; text-align: center;"></div>
+            </div>
+                                    <!-- developer console starts here -->
+<div id="content-dev" class="tab-content">
+    <p style="margin-top:0; color:#f5d042; font-weight:bold;">Developer Output</p>
+    
+    <div id="devLogContainer" style="height: 250px; overflow-y: auto; background: rgba(0,0,0,0.3); padding: 5px; margin-bottom: 8px;"></div>
+    
+    <div style="display: flex; gap: 5px; align-items: center;">
+        <span style="color: #f5d042; font-family: monospace; font-weight: bold;">]</span>
+        <input type="text" id="consoleInput" 
+               style="flex-grow: 1; background: #222; border: 1px solid #444; color: #fff; font-family: 'Lucida Console', monospace; padding: 4px; outline: none;" 
+               placeholder="Enter command (type 'help')..."
+               onkeydown="if(event.key === 'Enter') document.getElementById('cmdSend').click();">
+        <button id="cmdSend" class="source-btn" style="padding: 4px 12px; min-width: auto; margin: 0;" 
+                onclick="var input = document.getElementById('consoleInput'); executeCommand(input.value); input.value = ''; input.focus();">Submit</button>
+    </div>
+</div>
+        </div>
+        <div class="source-footer">
+            <button class="source-btn" onclick="saveSettings()">OK</button>
+            <button class="source-btn" onclick="toggleSettings(false)">Cancel</button>
+        </div>
+    </div>
+<!-- options HTML ends here -->
+<!-- legal and copyright -->
+<p>© 2026 The Fun.</p>
+<p><a href="legal" class="legal">Legal Disclaimer</a></p>
+<!-- load TriMess engine -->
+<script src="engine.js" defer></script>
+</body>
+</html>

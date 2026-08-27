@@ -1,0 +1,1727 @@
+/* ==========================================================================
+  TRIMESS MAIN STYLESHEET
+   THE FUN 2026
+   NOTE: NOT EVERY STYLING IS COVERED IN THIS DOCUMENT.
+   CHECK OTHER CSS FILES FOR THAT, OR OTHER STYLE TAGS IN CERTAIN
+   HTML DOCUMENTS!
+   ========================================================================== */
+/* ==========================================================================
+   Gallery Location Dividers
+   ========================================================================== */
+.location-divider-container {
+    width: 100%;
+    margin: 30px 0 15px 0;
+    text-align: left;
+    clear: both; /* Ensures it pushes down past floated images */
+}
+
+.location-header {
+    color: #FFA500;
+    font-family: "Tahoma", "Verdana", sans-serif;
+    font-size: 22px;
+    margin: 0 0 5px 0;
+    text-align: left;
+    border-bottom: none; /* Removing default border to use the custom line below */
+}
+
+.location-line {
+    border: none;
+    height: 1px;
+    background: #444; /* Matches your wiki table borders */
+    margin: 0;
+    width: 100%;
+}
+   /* ==========================================================================
+   Wiki Release / Project Table
+   ========================================================================== */
+.wiki-release-table {
+    width: 100%;
+    border-collapse: collapse; /* Essential for classic IE table styling */
+    margin: 20px 0;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.wiki-release-table th {
+    background-color: #1a1a1a;
+    color: #FFA500;
+    text-align: left;
+    padding: 10px 15px;
+    border-bottom: 2px solid #444;
+    font-family: "Tahoma", "Verdana", sans-serif;
+}
+
+.wiki-release-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #333;
+    color: #cccccc;
+    text-align: left;
+    vertical-align: top; /* Keeps text aligned at the top if notes get long */
+}
+
+.wiki-release-table tr:last-child td {
+    border-bottom: none;
+}
+
+.wiki-release-table tr:hover {
+    background-color: #333;
+    transition: background-color 0.2s ease;
+}
+
+/* Keeps the year column a bit tighter and stylized */
+.wiki-release-table .year-col {
+    width: 10%;
+    color: #888;
+    font-family: "Lucida Console", "Courier New", monospace;
+    white-space: nowrap;
+}
+/* ==========================================================================
+   426 Error Details & Dropdown
+   ========================================================================== */
+.error-details {
+    background-color: #0d0d0d;
+    border: 1px solid #444; 
+    padding: 30px 20px;
+    margin: 30px auto; 
+    max-width: 550px; 
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
+
+.error-details p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.error-details code {
+    display: block;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #888;
+    font-size: 11px;
+    margin-top: 20px;
+    border-top: 1px solid #222; 
+    padding-top: 10px;
+}
+
+/* Dropdown Container */
+.error-dropdown {
+    margin-bottom: 20px;
+    text-align: left; 
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 12px;
+}
+
+/* The clickable title */
+.error-dropdown summary {
+    color: #FFA500;
+    cursor: pointer;
+    font-family: "Tahoma", "Verdana", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    outline: none;
+    list-style: none; /* Hides default triangle in most browsers */
+    user-select: none;
+}
+
+/* Hides default triangle in WebKit (Chrome/Safari) */
+.error-dropdown summary::-webkit-details-marker {
+    display: none; 
+}
+
+/* Custom [+] icon */
+.error-dropdown summary::before {
+    content: "[+] ";
+    color: #888;
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin-right: 5px;
+}
+
+/* Changes to [-] when dropdown is open */
+.error-dropdown[open] summary::before {
+    content: "[-] ";
+    color: #ff2200;
+}
+
+/* The revealed text inside */
+.dropdown-content {
+    margin-top: 15px;
+    border-top: 1px dashed #444;
+    padding-top: 15px;
+}
+
+.dropdown-content p {
+    font-size: 13px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.dropdown-content ul {
+    list-style-type: square;
+    padding-left: 20px;
+    color: #888;
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.dropdown-content li {
+    margin-bottom: 6px;
+}
+   /* ==========================================================================
+   Wiki Twitter Quotes
+   ========================================================================== */
+.wiki-quote-box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-left: 5px solid #FFA500;
+    margin: 20px 0;
+    padding: 15px 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    max-width: 650px;
+}
+
+.wiki-quote-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 10px;
+}
+
+.wiki-quote-avatar {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background-color: #1a1a1a;
+    border: 1px solid #111;
+    margin-right: 15px;
+    display: block; /* IE11 fallback spacing */
+}
+
+.wiki-quote-meta {
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left;
+}
+
+.wiki-quote-name {
+    font-family: "Tahoma", "Verdana", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    margin: 0 0 2px 0;
+    text-align: left;
+}
+
+.wiki-quote-handle {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 11px;
+    color: #FFA500;
+    margin: 0;
+    text-align: left;
+}
+
+.wiki-quote-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #e1e1e1;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+/* Giant classic quotation mark styling */
+.wiki-quote-text::before {
+    content: "\201C"; 
+    font-size: 32px;
+    color: #555;
+    font-family: "Georgia", serif; /* Georgia provides the best classic quote mark */
+    line-height: 0;
+    vertical-align: -10px;
+    margin-right: 8px;
+}
+
+.wiki-quote-date {
+    font-size: 11px;
+    color: #888;
+    text-align: left;
+    margin: 0;
+    font-family: "Tahoma", "Verdana", sans-serif;
+}
+   /* ==========================================================================
+   Wiki Featured Articles
+   ========================================================================== */
+.wiki-featured-grid {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.wiki-featured-box {
+    width: 48%;
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+/* Stack them on smaller screens */
+@media screen and (max-width: 750px) {
+    .wiki-featured-box {
+        width: 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+}
+
+.wiki-featured-header {
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #444;
+    font-family: "Tahoma", "Verdana", sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.wiki-featured-header a {
+    color: #FFA500;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.wiki-featured-content {
+    padding: 12px;
+    color: #cccccc;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Clearfix for the floated image */
+.wiki-featured-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wiki-featured-thumb {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-right: 12px;
+    margin-bottom: 5px;
+    border: 1px solid #111;
+    background-color: #1a1a1a;
+}
+   /* ==========================================================================
+   Wiki Tracklist (Song List Table)
+   ========================================================================== */
+.wiki-tracklist {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.wiki-tracklist th {
+    background-color: #1a1a1a;
+    color: #FFA500;
+    text-align: left;
+    padding: 10px 15px;
+    border-bottom: 2px solid #444;
+    font-family: "Tahoma", "Verdana", sans-serif;
+}
+
+.wiki-tracklist td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #333;
+    color: #cccccc;
+    text-align: left;
+}
+
+.wiki-tracklist tr:last-child td {
+    border-bottom: none;
+}
+
+.wiki-tracklist tr:hover {
+    background-color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.track-number {
+    width: 5%;
+    color: #888;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center !important;
+}
+   /* ==========================================================================
+   Wiki Code Block (JSON Snippets)
+   ========================================================================== */
+pre.wiki-code-box {
+    display: block;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-left: 5px solid #FFA500;
+    padding: 15px;
+    margin: 20px 0;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 13px;
+    color: #e1e1e1;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 2px 2px 5px rgba(0,0,0,0.3);
+    -ms-overflow-style: scrollbar; /* Keeps scrollbar behaving in IE11 */
+}
+
+/* Optional: Style inline code to match if you aren't already */
+code.wiki-inline-code {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    padding: 2px 5px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 12px;
+    color: #FFA500;
+}
+   /* ==========================================================================
+   88x31 badge
+   ========================================================================== */
+.emblem-divider {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2); 
+    width: 50%;
+    margin: 15px auto 10px auto; 
+}
+.emblem-container {
+    display: block;             
+    margin: 15px auto;          
+    width: max-content;         
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#siteEmblem {
+    width: 88px;
+    height: 31px;
+    border: none;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated; 
+    transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#siteEmblem:hover {
+    transform: scale(1.05);
+    outline: 0.5px solid #FFA500;
+    outline-offset: 2px;
+}
+
+#siteEmblem:active {
+    transform: scale(0.95);
+}
+
+.copy-feedback {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    border: 1px solid #FFA500;
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+}
+
+.copy-feedback.show {
+    opacity: 1;
+}
+
+   /* ==========================================================================
+   Notice banner (Wiki)
+   ========================================================================== */
+.wiki-banner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #222;
+    border: 1px solid #FFA500;
+    border-left-width: 5px; 
+    /* Updated margin to center the banner (top: 0, horizontal: auto, bottom: 20px) */
+    margin: 0 auto 20px auto; 
+    padding: 10px 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    /* Add this to cap the length! */
+    max-width: 1100px; 
+}
+
+.wiki-banner-icon {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 40px;
+    margin-right: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.wiki-banner-text {
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left;
+}
+
+.wiki-banner-text h4 {
+    margin: 0 0 5px 0;
+    color: #FFA500;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.wiki-banner-text p {
+    margin: 0;
+    font-size: 12px;
+    color: #cccccc;
+    line-height: 1.4;
+    text-align: left;
+}
+   /* ==========================================================================
+   Category index (Wiki)
+   ========================================================================== */
+.wiki-category-section {
+    margin-top: 20px;
+}
+
+.wiki-category-letter {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFA500;
+    border-bottom: 1px solid #444;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+}
+
+.wiki-category-list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    column-gap: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 800px) {
+    .wiki-category-list {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+.wiki-category-list li {
+    margin-bottom: 5px;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+   /* ==========================================================================
+   Wiki layout
+   ========================================================================== */
+.wiki-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: transparent;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+/* ==========================================================================
+   Wiki scrolling image gallery
+   ========================================================================== */
+.wiki-gallery {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 20px 0;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    padding: 15px;
+    
+    scrollbar-face-color: #FFA500;
+    scrollbar-track-color: #1a1a1a;
+    scrollbar-arrow-color: #000;
+}
+
+.wiki-gallery::-webkit-scrollbar {
+    height: 10px;
+}
+.wiki-gallery::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+    border-top: 1px solid #444;
+}
+.wiki-gallery::-webkit-scrollbar-thumb {
+    background: #FFA500; 
+}
+
+.wiki-gallery-item {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 250px;
+    margin-right: 15px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+
+.wiki-gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #000;
+}
+
+.wiki-gallery-caption {
+    font-size: 13px;
+    color: #cccccc;
+    margin-top: 8px;
+    line-height: 1.3;
+}
+/* ==========================================================================
+   Wiki sidebar
+   ========================================================================== */
+.wiki-sidebar {
+    width: 150px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.wiki-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wiki-sidebar-box {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.wiki-sidebar-box h3 {
+    color: #666;
+    font-size: 12px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 5px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.wiki-sidebar-box ul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.wiki-sidebar-box li {
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+/* ==========================================================================
+   Wiki main content
+   ========================================================================== */
+.wiki-main {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    background-color: #222;
+    border: 1px solid #333;
+    padding: 20px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    min-width: 0; /* Prevents flexbox blowout */
+}
+
+/* ==========================================================================
+   Wiki tabs
+   ========================================================================== */
+.wiki-tabs {
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #FFA500;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.wiki-tab {
+    padding: 4px 12px;
+    font-size: 13px;
+    color: #FFA500;
+    border: 1px solid transparent;
+    margin-right: 2px;
+}
+
+.wiki-tab.active {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #FFA500;
+    border-bottom: 1px solid #222;
+    margin-bottom: -1px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+  Wiki content
+   ========================================================================== */
+.wiki-content {
+    text-align: left;
+}
+/* ==========================================================================
+   Wiki infobox
+   ========================================================================== */
+.wiki-infobox {
+    float: right;
+    width: 250px;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    margin: 0 0 15px 20px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.wiki-infobox-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFA500;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    font-family: "Tahoma", "Verdana", sans-serif;
+}
+
+.wiki-infobox img {
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    border: 1px solid #111;
+}
+
+.wiki-infobox-caption {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 8px;
+    font-style: italic;
+    line-height: 1.3;
+}
+.wiki-content h1 {
+    text-align: left;
+    font-family: "Tahoma", "Verdana", sans-serif;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    margin-top: 0;
+    color: #fff;
+}
+
+.wiki-content h2 {
+    text-align: left;
+    border-bottom: 1px solid #444;
+    padding-bottom: 3px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.wiki-content p {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+/* ==========================================================================
+   Wiki Table Of Contents (TOC)
+   ========================================================================== */
+.wiki-toc {
+    display: inline-block;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    padding: 10px 20px 10px 10px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.wiki-toc-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.wiki-toc ul {
+    text-align: left;
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+.wiki-toc li {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+.rss-badge {
+    font-family: monospace;
+    font-size: 12px;
+    color: #FFA500 !important;
+    background: #222;
+    border: 1px solid #444;
+    padding: 3px 8px;
+    text-shadow: none !important;
+}
+.rss-badge:hover {
+    background: #FFA500;
+    color: #000 !important;
+    border-color: #FFA500;
+}
+/* ==========================================================================
+   base stlyes
+   ========================================================================== */
+html {
+    height: 100%;
+    background-color: #1a1a1a;
+}
+
+html::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom, #0d0d0d 0%, #1a1a1a 60%) no-repeat;
+    pointer-events: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: transparent;
+    color: white;
+    height: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background-attachment: fixed; 
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, form {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ==========================================================================
+   text and others
+   ========================================================================== */
+a {
+    color: #FFA500;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a:hover {
+    color: #FFB732;
+    text-shadow: 0 0 8px #FF8C00, 0 0 20px #FF8C00, 0 0 40px rgba(255,140,0,0.6);
+}
+
+a.white-link {
+    color: white;
+}
+
+a.white-link:hover {
+    color: white;
+    text-shadow: 0 0 8px white, 0 0 20px rgba(255,255,255,0.4);
+}
+
+.legal {
+    color: #212121;
+}
+
+.legal:hover {
+    color: #444;
+    text-shadow: none;
+}
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+picture#mainTitle {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gctr, #titleImg {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    -ms-interpolation-mode: bicubic; 
+}
+
+#titleImg {
+    width: 750px;
+    max-width: 95%; 
+}
+
+.gctr {
+    width: 850px;
+    max-width: 95%; 
+}
+
+@media screen and (max-width: 850px) {
+    #titleImg, .gctr {
+        width: 90vw;
+    }
+}
+
+/* ==========================================================================
+   Blog posts
+   ========================================================================== */
+
+.blog-container {
+    display: block;          
+    width: 100%;             
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #1a1a1a; 
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+.blog-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    border-bottom: 2px solid #333;
+    padding-bottom: 15px;
+}
+
+.blog-layout {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+}
+
+.blog-text {
+    width: 100%;
+}
+
+.blog-text p {
+    text-align: left; 
+    line-height: 1.6; 
+    color: #cccccc;   
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.blog-image-container {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111; 
+    padding: 15px;
+    border: 1px dashed #333; 
+    border-radius: 4px;
+}
+
+.blog-image {
+    width: 100%;
+    max-width: 700px; 
+    height: auto;
+    transition: transform 0.2s ease; 
+    cursor: zoom-in;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+}
+
+.blog-image:hover {
+    transform: scale(1.02); 
+    border-color: #555;
+}
+
+.blog-text ul {
+    list-style-type: none;
+    padding-left: 15px; 
+    margin: 20px 0;     
+}
+
+.blog-text li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #cccccc;     
+    line-height: 1.5;
+}
+
+.blog-text li::before {
+    content: "- ";      
+    color: #FFA500;     
+    font-weight: bold;
+}
+
+.image-caption {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 12px;
+    font-style: italic;
+    font-family: monospace; 
+}
+
+.blog-footer {
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+.blog-footer .last-updated {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0;
+    font-family: monospace;
+}
+
+/* ==========================================================================
+   Blog text on the side layout
+   ========================================================================== */
+
+.blog-split-layout {
+    display: -ms-flexbox;    
+    display: flex;
+    -ms-flex-wrap: wrap;     
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 35px 0;
+    align-items: flex-start;
+}
+
+.blog-split-left {
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    min-width: 220px;
+}
+
+.blog-split-right {
+    -ms-flex: 1.8 1 0px;
+    flex: 1.8 1 0px;
+    min-width: 320px;
+}
+
+.blog-split-left ul {
+    text-align: left;        
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.blog-split-left ul ul {
+    margin: 5px 0 5px 25px;
+}
+
+.blog-split-left li {
+    position: relative;
+    padding-left: 20px;      
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.blog-split-left li::before {
+    content: "- ";
+    position: absolute;
+    left: 0;                 
+    top: 0;
+    color: #FFA500;
+    font-weight: bold;
+}
+
+.blog-split-right .blog-image-container {
+    margin: 0;
+    width: 100%;
+}
+
+/* ==========================================================================
+   fullscreen medal shit
+   ========================================================================== */
+#image-overlay {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: visible;
+}
+#image-overlay::backdrop {
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(3px);
+}
+#fullscreen-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 40px rgba(0,0,0,1);
+    cursor: default; 
+    border: 2px solid #333;
+}
+
+/* ==========================================================================
+   Legals
+   ========================================================================== */
+.last-updated {
+    text-align: right;        
+    font-size: 0.75rem;       
+    color: #666;              
+    margin-top: 30px;         
+    font-family: monospace;   
+}
+
+.legal-box {
+    max-width: 750px;       
+    margin: 40px auto;      
+    padding: 40px;
+    background-color: #1a1a1a; 
+    border: 1px solid #333;  
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
+
+.legal-content p {
+    text-align: left;       
+    line-height: 1.6;       
+    color: #cccccc;         
+    margin-bottom: 20px;    
+}
+
+.legal-box h1, .legal-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.yellow-link {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+.yellow-link:hover {
+    text-decoration: underline;
+}
+/* ==========================================================================
+   Note
+   ========================================================================== */
+#noteContainer {
+    cursor: pointer;
+    margin-top: 40px;
+    display: block;
+    transform-origin: top center; 
+    transition: filter 0.2s ease;
+}
+
+@keyframes noteSnapDrop {
+    0% {
+        transform: rotate(0deg) translateY(0) translateX(0);
+        opacity: 1;
+    }
+    20% {
+        transform: rotate(4deg) translateY(20px) translateX(5px);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-15deg) translateY(1000px) translateX(-150px);
+        opacity: 0;
+    }
+}
+
+.note-dropped {
+    animation: noteSnapDrop 0.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards !important;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+#noteContainer:hover {
+    filter: brightness(1.1); 
+}
+/* ==========================================================================
+   Achievements unlock
+   ========================================================================== */
+.achievement-card:not(.unlocked) .achievement-icon[src*="hidden_icon"] {
+    filter: blur(4px) grayscale(100%);
+    opacity: 0.5;
+}
+
+.achievement-card:not(.unlocked) h5 {
+    font-style: italic;
+    color: #888;
+}
+
+#achievement-container {
+    position: fixed;
+    bottom: 15px; 
+    right: 15px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.achievement-toast {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 320px;
+    background: #3d3d3d; 
+    background: linear-gradient(to bottom, #4c4c4c 0%, #2b2b2b 100%);
+    border: 1px solid #111;
+    padding: 12px;
+    margin-bottom: 10px; 
+    color: #e1e1e1;
+    font-family: "Tahoma", "Verdana", sans-serif;
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.achievement-toast.show { 
+    transform: translateY(0); 
+    opacity: 1;
+}
+
+.achievement-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border: 1px solid #111;
+    background: #000;
+}
+
+.achievement-text {
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left;
+}
+
+.achievement-text h5 { 
+    margin: 0; 
+    color: #e1e1e1; 
+    font-size: 14px; 
+    text-transform: none; 
+    font-weight: bold;
+}
+
+.achievement-text p { 
+    margin: 4px 0 0; 
+    font-size: 12px; 
+    color: #a0a0a0; 
+}
+
+/* ==========================================================================
+   Achievements page
+   ========================================================================== */
+#achievements-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+}
+
+.achievement-card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 300px;
+    background: #222; 
+    border: 1px solid #111;
+    margin: 10px; 
+    padding: 15px;
+    filter: grayscale(100%);
+    opacity: 0.4;
+    transition: transform 0.2s ease, filter 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+}
+
+.achievement-card.unlocked {
+    filter: grayscale(0%);
+    opacity: 1;
+    border-color: #444;
+    background: linear-gradient(to bottom, #4c4c4c 0%, #2b2b2b 100%);
+}
+
+.achievement-card.unlocked:hover {
+    transform: scale(1.02);
+    border-color: #666; 
+}
+
+.achievement-card .achievement-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border: 1px solid #111;
+}
+
+.achievement-card.unlocked .achievement-icon {
+    border-color: #555;
+}
+
+.achievement-card .achievement-text h5 {
+    color: #e1e1e1;
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.achievement-card .achievement-text p {
+    color: #a0a0a0;
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.achievement-card small {
+    display: block;
+    margin-top: 5px;
+}
+
+.achievement-card.impossible {
+    opacity: 0.15; 
+    filter: grayscale(100%) contrast(80%);
+    cursor: not-allowed;
+    border-style: dashed; 
+}
+
+.impossible-tag {
+    color: #ff4444;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: block;
+}
+
+/* ==========================================================================
+   TFGUI
+   ========================================================================== */
+
+#content-site > div[style] {
+    -ms-flex-pack: center;   /* IE11 */
+    justify-content: center;
+}
+
+.source-body {
+    margin: 0 4px 4px 4px;
+    padding: 15px;
+    border: 1px solid #2b2b2b;
+    background-color: #3d3d3d;
+    max-height: 55vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 12px;
+    color: #e1e1e1;
+}
+
+.setting-row {
+    margin-top: 10px;
+    position: relative;
+    display: -ms-flexbox;   
+    display: flex;
+    -ms-flex-align: center; 
+    align-items: center;
+    width: 100%;
+    max-width: 260px;          
+}
+.setting-row input { margin-right: 8px; }
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 24px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 220px;
+    background-color: #ffffe1;
+    color: #000000;
+    padding: 4px 6px;
+    border: 1px solid #000;
+    font-size: 11px;
+    line-height: 1.3;
+    z-index: 10001;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+    pointer-events: none;
+    white-space: normal;
+    word-break: break-word;
+    box-sizing: border-box;
+}
+
+.setting-row:hover .tooltip { visibility: visible; }
+
+@media screen and (max-width: 320px) {
+    .source-modal { width: 95vw; }
+    .source-tab-item { padding: 4px 6px; font-size: 10px; }
+    .tooltip { left: 0; top: 28px; max-width: 95%; }
+}
+
+.source-header {
+    padding: 4px 8px;
+    font-size: 11px;
+    display: -ms-flexbox;           /* IE11 */
+    display: flex;
+    -ms-flex-pack: justify;         /* IE11 */
+    justify-content: space-between;
+    -ms-flex-align: center;         /* IE11 */
+    align-items: center;
+    cursor: move;
+    color: #ffffff;
+    background: #4c4c4c;
+}
+.source-tabs {
+    display: -ms-flexbox;   /* IE11 */
+    display: flex;
+    padding: 0 6px;
+    margin-top: 2px;
+}
+ 
+.source-tabs { display: flex; padding: 0 6px; gap: 2px; margin-top: 2px; }
+
+.source-tab-item {
+    padding: 4px 10px;
+    border: 1px solid #2b2b2b;
+    border-bottom: none;
+    background: #3d3d3d;
+    font-size: 11px;
+    color: #bbbbbb;
+    cursor: pointer;
+}
+
+.source-tab-item.active {
+    background: #4c4c4c;
+    color: #ffffff;
+    border-bottom: 1px solid #4c4c4c;
+    margin-bottom: -1px;
+    z-index: 2;
+}
+
+.tab-content { 
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    -ms-flex-direction: column;
+    -ms-flex-align: center;
+}
+.tab-content.active { 
+    display: -ms-flexbox;
+    display: flex; 
+}
+.source-footer { display: flex; justify-content: flex-end; padding: 8px; }
+
+.source-btn {
+    background: #4c4c4c;
+    border: 1px solid #666666;
+    color: #e1e1e1;
+    padding: 3px 15px;
+    font-size: 11px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 6px;
+}
+
+.source-btn:hover { background: #5a5a5a; border-color: #999999; }
+.source-btn:active { background: #333333; border-color: #222222; }
+.close-btn { background: none; border: none; color: #888; font-size: 16px; cursor: pointer; line-height: 10px; }
+.about-container { display: flex; }
+.about-img { width: 64px; height: 64px; border: 1px solid #1a1a1a; background-color: #2b2b2b; flex-shrink: 0; margin-right: 12px; }
+input[type="checkbox"] { vertical-align: middle; cursor: pointer; }
+.source-link { color: #8cb6d9; text-decoration: none; }
+.source-link:hover { text-decoration: underline; color: #ffffff; }
+
+@keyframes spinInfinite {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+#mainTitle {
+    animation: logoFloat 4s ease-in-out infinite;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    will-change: transform;
+}
+
+.spinning-forever {
+    animation: spinInfinite 10s linear infinite !important;
+}
+.tooltip-up {
+    top: auto;
+    bottom: 24px;
+}
+#onScreenConsole {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 99999;
+    pointer-events: none;
+    display: none;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 4px 6px;
+}
+
+.console-line {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 12px;
+    color: #e1e1e1;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    margin-bottom: 1px;
+    -webkit-animation: fadeOutConsole 6s forwards;
+    animation: fadeOutConsole 6s forwards;
+}
+
+.console-line:last-child { margin-bottom: 0; }
+
+@keyframes fadeOutConsole {
+    0% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#devLogContainer {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #222;
+    border: 1px inset #111;
+    padding: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 11px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+@keyframes logoFallEngine {
+    0% { 
+        transform: translateY(0px) rotate(0deg); 
+        filter: blur(0px);
+        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1); 
+    }
+    15% { 
+        transform: translateY(20px) rotate(28deg); 
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); 
+    }
+    30% { 
+        transform: translateY(25px) rotate(22deg); 
+        animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.33); 
+    }
+    100% { 
+        transform: translateY(1800px) rotate(130deg); 
+        filter: blur(5px); 
+        opacity: 0; 
+    }
+}
+
+.physics-fall {
+    animation: logoFallEngine 2s forwards !important;
+    will-change: transform, opacity; 
+    pointer-events: none;
+    transform-origin: 20% 10%; 
+}
+
+.error-heading {
+    animation: error-flash 1.5s ease-in-out infinite;
+}
+
+@keyframes error-flash {
+    0%, 100% { color: #ff2200; text-shadow: 0 0 10px #ff2200, 0 0 30px #ff2200, 0 0 60px rgba(255,34,0,0.5); }
+    50% { color: #ff6644; text-shadow: 0 0 20px #ff2200, 0 0 50px #ff2200, 0 0 80px rgba(255,34,0,0.8); }
+}
+
+@keyframes vignette-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+#vignette {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, transparent 50%, rgba(0,0,0,0.9) 150%);
+    pointer-events: none;
+    z-index: 9998;
+    animation: vignetteSnapIn 0.1s ease-out forwards;
+    will-change: opacity, transform;
+}
+
+body.fade-out #vignette {
+    animation: vignettePullBack 0.1s ease-in forwards;
+}
+
+@keyframes vignetteSnapIn {
+    0% { opacity: 0; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes vignettePullBack {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.3); }
+}
+
+.teapot-small {
+    display: block;
+    margin: 20px auto;
+    width: 20%;
+    min-width: 150px;
+    max-width: 250px;
+    cursor: pointer;
+    transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.teapot-small:hover {
+    transform: scale(1.05);
+}
+
+.teapot-small:active {
+    transform: scale(0.95);
+}
+
+.rocking {
+    animation: teapot-rattle 0.6s ease-in-out;
+}
+
+@keyframes teapot-rattle {
+    0%   { transform: rotate(0deg); }
+    15%  { transform: rotate(-10deg); }
+    30%  { transform: rotate(8deg); }
+    45%  { transform: rotate(-5deg); }
+    60%  { transform: rotate(3deg); }
+    75%  { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.source-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    width: 420px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 95vw;
+    background-color: #4c4c4c;
+    border: 1px solid #2b2b2b;
+    padding: 2px;
+    font-family: "Tahoma", "Verdana", sans-serif;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+    color: #e1e1e1;
+    box-sizing: border-box;
+}
+
+.tab {
+    padding: 4px 8px;
+    background: #3d3d3d;
+    border: 1px solid #333333;
+    border-bottom: none;
+    cursor: pointer;
+    color: #bbbbbb;
+}
+
+.tab.active {
+    background: #4c4c4c;
+    color: #ffffff;
+    border-bottom: 1px solid #4c4c4c;
+    margin-bottom: -1px;
+    z-index: 2;
+}
+
+.close-x {
+    cursor: pointer;
+    font-size: 14px;
+    color: #888;
+}
+
+.close-x:hover { color: white; }
+
+/* ==========================================================================
+   Developer Console Tab Width Expansion
+   ========================================================================== */
+
+/* Automatically widens the options modal ONLY when Console tab is active */
+#settingsModal:has(#content-dev.active),
+#settingsModal:has(#tab-dev.active) {
+    width: 680px !important;
+}
+
+/* Forces the console content and log container to fit the modal */
+#content-dev {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+}

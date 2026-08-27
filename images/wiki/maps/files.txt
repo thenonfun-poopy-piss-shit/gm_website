@@ -1,0 +1,12 @@
+DIRECTORY OF /images/wiki/maps
+------------------ 
+[FILE] gm_latola-day.webp 
+[FILE] gm_latola-main.webp 
+[FILE] gm_latola-main2.webp 
+[FILE] gm_latola-old.webp 
+[FILE] gm_wayremake-main.webp 
+[FILE] gm_wayremake-med.webp 
+[FILE] gm_wayremake-memorial.webp 
+[FILE] gm_wayremake-old.webp 
+------------------ 
+END OF LIST 

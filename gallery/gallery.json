@@ -1,0 +1,1325 @@
+[
+                          {
+    "id": "HON9X_BERRY",
+    "filename": "berries.webp",
+    "title": "Berries",
+    "resolution": "4000 x 3000",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "2021-07-17 18.41",
+    "raw": false
+  },
+                            {
+    "id": "HON9X_WINTER3",
+    "filename": "winter3.webp",
+    "title": "Winter 1",
+    "resolution": "8000 x 6000",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "2021-01-21 14.14",
+    "raw": false
+  },
+                              {
+    "id": "HON9X_WINTER2",
+    "filename": "winter2.webp",
+    "title": "Winter 2",
+    "resolution": "8000 x 6000",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "2021-01-08 14.11",
+    "raw": false
+  },
+                                {
+    "id": "HON9X_WINTER1",
+    "filename": "winter1.webp",
+    "title": "Winter 3",
+    "resolution": "8000 x 6000",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "2021-01-08 14.10",
+    "raw": false
+  },
+                                  {
+    "id": "HON9X_COLOR",
+    "filename": "color.webp",
+    "title": "Sky of Color",
+    "resolution": "8000 x 6000",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "2020-12-07 16.57",
+    "raw": false
+  },
+                                    {
+    "id": "HON9X_FLAGS",
+    "filename": "flagpoles.webp",
+    "title": "Poles",
+    "resolution": "8000 x 6000",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "2020-11-04 14.48",
+    "raw": false
+  },
+                                      {
+    "id": "HON9X_NURMTRACKS",
+    "filename": "nurmtracks1.webp",
+    "title": "Tracks",
+    "resolution": "8000 x 6000",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "2020-10-14 13.52",
+    "raw": false
+  },
+                                    {
+    "id": "HON9X_DOGCARPET",
+    "filename": "dogoncarpet.webp",
+    "title": "Ville",
+    "resolution": "8000 x 6000",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "2021-01-03 16.57",
+    "raw": false
+  },
+                          {
+    "id": "CANON2_NF1",
+    "filename": "nurmflower1.webp",
+    "title": "Flowers",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+                            {
+    "id": "CANON2_NF2",
+    "filename": "nurmflower2.webp",
+    "title": "Flower",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+                              {
+    "id": "CANON2_NS",
+    "filename": "nurmsign.webp",
+    "title": "Sign",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+                                {
+    "id": "CANON2_NW",
+    "filename": "nurmwall.webp",
+    "title": "Corner",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+                                  {
+    "id": "CANON2_NRSR",
+    "filename": "ruinssummer2.webp",
+    "title": "Summer ruins 2",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+                                            {
+    "id": "CANON2_VIEW",
+    "filename": "nurmview.webp",
+    "title": "Wide Land",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+                                    {
+    "id": "CANON2_NRTRC1",
+    "filename": "nurmtrainsigns1.webp",
+    "title": "Train Signs",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+                                          {
+    "id": "CANON2_SIGNTRAIN",
+    "filename": "nurmtrainsign1.webp",
+    "title": "Old Sign",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+                                      {
+    "id": "CANON2_NRTRC2",
+    "filename": "nurmtracks2.webp",
+    "title": "Tracks 1",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+                                        {
+    "id": "CANON2_NRTRC3",
+    "filename": "nurmtracks3.webp",
+    "title": "Tracks 2",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+  
+                        {
+    "id": "CANON2_TREES",
+    "filename": "trees.webp",
+    "title": "Trees",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+        {
+    "id": "CANON2_BRANCHES",
+    "filename": "branches.webp",
+    "title": "Branches",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+            {
+    "id": "CANON2_KESKJOEN",
+    "filename": "joenkesk1.webp",
+    "title": "Strong glows",
+    "resolution": "1280 x 960",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+          {
+    "id": "CANON2_BO1",
+    "filename": "bridgeocean1.webp",
+    "title": "Sunset Bridge 1",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+            {
+    "id": "CANON2_BO2",
+    "filename": "bridgeocean2.webp",
+    "title": "Sunset Bridge 2",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+              {
+    "id": "CANON2_BUSSTOP",
+    "filename": "busstop.webp",
+    "title": "Bus Stop",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                {
+    "id": "CANON2_DARK1",
+    "filename": "darkbuilding.webp",
+    "title": "After Dark",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                  {
+    "id": "CANON2_DARK2",
+    "filename": "winterpath.webp",
+    "title": "Winter Path",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                    {
+    "id": "CANON2_DARK3",
+    "filename": "nightmarket1.webp",
+    "title": "S-Market",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                      {
+    "id": "CANON2_DARK4",
+    "filename": "treelight.webp",
+    "title": "Gray Skies",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                        {
+    "id": "CANON2_HILL1",
+    "filename": "hilllamp.webp",
+    "title": "Hill Lamp",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                          {
+    "id": "CANON2_HILL2",
+    "filename": "lightstimesthree.webp",
+    "title": "Lights",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                              {
+    "id": "CANON2_SIGN",
+    "filename": "roadsign.webp",
+    "title": "Road Sign",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                                {
+    "id": "CANON2_PUDDLE",
+    "filename": "puddle.webp",
+    "title": "Ripple",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                                  {
+    "id": "CANON2_SUNSHADE1",
+    "filename": "sunshade1.webp",
+    "title": "Sunshade 1",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                                    {
+    "id": "CANON2_SUNSHADE2",
+    "filename": "sunshade2.webp",
+    "title": "Sunshade 2",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                                      {
+    "id": "CANON2_GRAF",
+    "filename": "graf.webp",
+    "title": "Scribbles of Wisdom",
+    "resolution": "3648 x 2736",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+      {
+    "id": "CANON1_CLOUDSNURMES",
+    "filename": "cloudsnurmes.webp",
+    "title": "Clouds",
+    "resolution": "640 x 480",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+        {
+    "id": "CANON1_VIIVI",
+    "filename": "viivi.webp",
+    "title": "Viivi",
+    "resolution": "2816 x 2112",
+    "format": "WebP, JPG",
+    "location": "Nurmes",
+    "datetime": "?",
+    "raw": false
+  },
+          {
+    "id": "CANON1_WINTERFIRE",
+    "filename": "winterfire1.webp",
+    "title": "Winter Fire",
+    "resolution": "2112 x 2816",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+            {
+    "id": "CANON1_WINTERHILL",
+    "filename": "winterhill1.webp",
+    "title": "Winter Hill",
+    "resolution": "2816 x 2112",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+              {
+    "id": "CANON1_WINTERJOENSUU",
+    "filename": "winterjoensuu1.webp",
+    "title": "Winter Joensuu 1",
+    "resolution": "2816 x 2112",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+                {
+    "id": "CANON1_WINTERJOENSUU2",
+    "filename": "winterjoensuu2.webp",
+    "title": "Winter Joensuu 2",
+    "resolution": "2816 x 2112",
+    "format": "WebP, JPG",
+    "location": "Joensuu",
+    "datetime": "?",
+    "raw": false
+  },
+            {
+    "id": "WP930_MÄRKATU",
+    "filename": "märkäkatu.webp",
+    "title": "Rainy Neighbourhood",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-08-19 15.31",
+    "raw": true
+  },
+          {
+    "id": "WP930_MÄRKESK",
+    "filename": "märkäkeskusta.webp",
+    "title": "Wet Market",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-08-19 14.54",
+    "raw": true
+  },
+        {
+    "id": "WP930_UNDERPASS",
+    "filename": "underpass.webp",
+    "title": "Underpass",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-08-17 07.06",
+    "raw": true
+  },
+      {
+    "id": "WP930_SMARKET",
+    "filename": "smarket2.webp",
+    "title": "S-Market 2",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-08-07 21.39",
+    "raw": true
+  },
+        {
+    "id": "WP930_R2NW",
+    "filename": "roadtonowhere.webp",
+    "title": "Road to nowhere",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-08-07 21.08",
+    "raw": true
+  },
+            {
+    "id": "WP930_UCalt",
+    "filename": "underconstruction_alt.webp",
+    "title": "Under Construction [alt]",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-08-13 07.42",
+    "raw": true
+  },
+          {
+    "id": "WP930_UC",
+    "filename": "underconstruction.webp",
+    "title": "Under Construction",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-08-11 07.41",
+    "raw": true
+  },
+    {
+    "id": "WP930_JOENSUUMORE5",
+    "filename": "joensuumore5.webp",
+    "title": "View at playground [alt]",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-07-22",
+    "raw": true
+  },
+      {
+    "id": "WP930_JOENSUUMORE4",
+    "filename": "joensuumore4.webp",
+    "title": "View at playground",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-07-22",
+    "raw": true
+  },
+        {
+    "id": "WP930_JOENSUUMORE3",
+    "filename": "joensuumore3.webp",
+    "title": "After Dark 3",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-07-22",
+    "raw": true
+  },
+          {
+    "id": "WP930_JOENSUUMORE2",
+    "filename": "joensuumore2.webp",
+    "title": "After Dark 2",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-07-22",
+    "raw": true
+  },
+            {
+    "id": "WP930_JOENSUUMORE1",
+    "filename": "joensuumore1.webp",
+    "title": "After Dark 1",
+    "resolution": "4992 x 3744",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-07-22",
+    "raw": true
+  },
+    {
+    "id": "WP930_BUILD1",
+    "filename": "build1.webp",
+    "title": "Row of Buildings",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-19",
+    "raw": true
+  },
+      {
+    "id": "WP930_BUILD2",
+    "filename": "build2.webp",
+    "title": "Buildings",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-19",
+    "raw": true
+  },
+        {
+    "id": "WP930_churchB",
+    "filename": "churchB.webp",
+    "title": "Helsingin johanneksenkirkko",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Korkeavuorenkatu 12, Ullanlinna, Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+          {
+    "id": "WP930_EST1",
+    "filename": "est1.webp",
+    "title": "Estonia 1",
+    "resolution": "3722 x 4992",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+            {
+    "id": "WP930_EST2",
+    "filename": "est2.webp",
+    "title": "Estonia 2",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+              {
+    "id": "WP930_EST3",
+    "filename": "est3.webp",
+    "title": "Estonia 3",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+            {
+    "id": "WP930_EST4",
+    "filename": "est4.webp",
+    "title": "Estonia 4",
+    "resolution": "3722 x 4992",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+              {
+    "id": "WP930_EST5",
+    "filename": "est5.webp",
+    "title": "Estonia 5",
+    "resolution": "3722 x 4992",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+                {
+    "id": "WP930_EST6",
+    "filename": "est6.webp",
+    "title": "Estonia 6",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+                  {
+    "id": "WP930_HELBUILD",
+    "filename": "helbuild.webp",
+    "title": "Building",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+                    {
+    "id": "WP930_ISLAND1",
+    "filename": "island1.webp",
+    "title": "Island",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-19",
+    "raw": true
+  },
+                      {
+    "id": "WP930_ISLAND2",
+    "filename": "island2.webp",
+    "title": "Island 2",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-19",
+    "raw": true
+  },
+      {
+    "id": "WP930_ISLAND3",
+    "type": "video",
+    "filename": "island3.mp4",
+    "title": "Island 3",
+    "resolution": "1920 x 1080 @ 30 FPS",
+    "format": ".MP4",
+    "location": "Helsinki",
+    "datetime": "2026-06-19",
+    "raw": false
+  },
+      {
+    "id": "WP930_MACHINE1",
+    "filename": "machine1.webp",
+    "title": "Machinery",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-19",
+    "raw": true
+  },
+        {
+    "id": "WP930_PARK",
+    "filename": "park.webp",
+    "title": "Park",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-19",
+    "raw": true
+  },
+          {
+    "id": "WP930_THEFART",
+    "filename": "thefart.webp",
+    "title": "The Tart",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+            {
+    "id": "WP930_BRICK",
+    "filename": "brick.webp",
+    "title": "Bricks",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-06-15",
+    "raw": true
+  },
+              {
+    "id": "WP930_STREET1",
+    "filename": "street1.webp",
+    "title": "Street 1",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-06-15",
+    "raw": true
+  },
+                {
+    "id": "WP930_STREET2",
+    "filename": "street2.webp",
+    "title": "Street 2",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-06-15",
+    "raw": true
+  },
+                  {
+    "id": "WP930_FLOWER1212",
+    "filename": "flower2.webp",
+    "title": "Pink Flower",
+    "resolution": "4992 x 3722",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-06-15",
+    "raw": true
+  },
+          {
+    "id": "PXL_NIGHTMARKET",
+    "filename": "nightkmarket.webp",
+    "title": "Night K",
+    "resolution": "2296 x 1720",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-08-07 22.29",
+    "raw": true
+  },
+            {
+    "id": "PXL_SOMEWHERE",
+    "filename": "somewhere.webp",
+    "title": "Somewhere",
+    "resolution": "2296 x 1720",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-08-07 21.04",
+    "raw": true
+  },
+        {
+    "id": "PXL_BADPHONE",
+    "filename": "shittyphone.webp",
+    "title": "Bad Phone",
+    "resolution": "2548 x 3398",
+    "format": "WebP, DNG",
+    "location": "Nurmes",
+    "datetime": "2026-07-13",
+    "raw": true
+  },
+      {
+    "id": "PXL_JOENMORE1",
+    "filename": "istanbul1.webp",
+    "title": "Istanbul",
+    "resolution": "4608 x 3456",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-07-22",
+    "raw": true
+  },
+    {
+    "id": "PXL_JOENROAD1",
+    "filename": "joenroad1.webp",
+    "title": "Road in Joensuu",
+    "resolution": "2992 x 2242",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-06-21",
+    "raw": true
+  },
+    {
+    "id": "PXL_CHURCH1",
+    "filename": "church1.webp",
+    "title": "Helsingin tuomiokirkko",
+    "resolution": "4608 x 3456",
+    "format": "WebP, DNG",
+    "location": "Unioninkatu 29, Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+      {
+    "id": "PXL_CHURCH2",
+    "filename": "church2.webp",
+    "title": "Helsingin johanneksenkirkko",
+    "resolution": "4608 x 3456",
+    "format": "WebP, DNG",
+    "location": "Korkeavuorenkatu 12, Ullanlinna, Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+        {
+    "id": "PXL_CHURCHA",
+    "filename": "churchA.webp",
+    "title": "Helsingin johanneksenkirkko",
+    "resolution": "3456 x 4608",
+    "format": "WebP, DNG",
+    "location": "Korkeavuorenkatu 12, Ullanlinna, Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+  {
+    "id": "PXL_STATUE3",
+    "filename": "statues3.webp",
+    "title": "Statues (Elias Lönnrot ja Väinämöinen)",
+    "resolution": "3456 x 4608",
+    "format": "WebP, DNG",
+    "location": "Lönnrotinkatu 5-7, Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+                      {
+    "id": "PXL_JC",
+    "filename": "justc.webp",
+    "title": "Just sea",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Helsinki",
+    "datetime": "2026-06-20 20.18",
+    "raw": false
+  },
+                    {
+    "id": "PXL_FCM1",
+    "filename": "foggychristmas1.webp",
+    "title": "Foggy Christmas 1",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-12-16 15.11",
+    "raw": false
+  },
+                  {
+    "id": "PXL_FCM2",
+    "filename": "foggychristmas2.webp",
+    "title": "Foggy Christmas 2",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-12-16 15.20",
+    "raw": false
+  },
+                {
+    "id": "PXL_SHBB3",
+    "filename": "silenthillbutbad3.webp",
+    "title": "Silent Hill but bad 3",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-12-16 14.45",
+    "raw": false
+  },
+              {
+    "id": "PXL_LJ",
+    "filename": "longyellow.webp",
+    "title": "Long Yellowness",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Kontiolahti",
+    "datetime": "2025-12-29 16.49",
+    "raw": false
+  },
+          {
+    "id": "PXL_PRISMA",
+    "filename": "prisma.webp",
+    "title": "Prisma",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-11-09 17.12",
+    "raw": false
+  },
+        {
+    "id": "PXL_SETBRIDGE",
+    "filename": "sunsetbridge.webp",
+    "title": "Sunset Bridge",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-11-04 14.39",
+    "raw": false
+  },
+      {
+    "id": "PXL_UNDERBRIDGE",
+    "filename": "underbridge.webp",
+    "title": "Under Bridge",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-11-18 14.19",
+    "raw": false
+  },
+    {
+    "id": "PXL_AFTERDARKROW",
+    "filename": "afterdarkrow.webp",
+    "title": "After Dark rows",
+    "resolution": "3472 x 4624",
+    "format": "WebP, DNG",
+    "location": "Joensuu",
+    "datetime": "2026-07-21 23.38",
+    "raw": true
+  },
+  {
+    "id": "PXL_STATUE2",
+    "filename": "artstatue.webp",
+    "title": "Valon tuoja",
+    "resolution": "3456 x 4608",
+    "format": "WebP, DNG",
+    "location": "Kasarmitori, Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+    {
+    "id": "PXL_SEAGULL",
+    "filename": "seagull.webp",
+    "title": "Seagull",
+    "resolution": "1816 x 1360",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+    {
+    "id": "PXL_BUILDING1",
+    "filename": "building1.webp",
+    "title": "Building",
+    "resolution": "4608 x 3456",
+    "format": "WebP, DNG",
+    "location": "Lönnrotinkatu 5-7, Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+      {
+    "id": "PXL_BUILDING2",
+    "filename": "building2.webp",
+    "title": "Säätytalo",
+    "resolution": "4608 x 3456",
+    "format": "WebP, DNG",
+    "location": "Snellmaninkatu 9–11, Helsinki",
+    "datetime": "2026-06-19",
+    "raw": true
+  },
+      {
+    "id": "PXL_TBUILD",
+    "filename": "tallbuilding1.webp",
+    "title": "Towering",
+    "resolution": "3456 x 4608",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+      {
+    "id": "PXL_ESTONIA1",
+    "filename": "estonia1.webp",
+    "title": "Estonia 1",
+    "resolution": "3456 x 4608",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20 12.02",
+    "raw": true
+  },
+        {
+    "id": "PXL_ESTONIA2",
+    "filename": "estonia2.webp",
+    "title": "Estonia 2",
+    "resolution": "4608 x 3456",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+          {
+    "id": "PXL_ESTONIA3",
+    "filename": "estonia3.webp",
+    "title": "Estonia 3",
+    "resolution": "3456 x 4608",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+            {
+    "id": "PXL_ESTONIA4",
+    "filename": "estonia4.webp",
+    "title": "Estonia 4",
+    "resolution": "3456 x 4608",
+    "format": "WebP, DNG",
+    "location": "Tallin",
+    "datetime": "2026-06-20",
+    "raw": true
+  },
+  {
+    "id": "PXL_SEA1",
+    "filename": "sea1.webp",
+    "title": "Sea",
+    "resolution": "4608 x 3456",
+    "format": "WebP, DNG",
+    "location": "Helsinki",
+    "datetime": "2026-06-18",
+    "raw": true
+  },
+   {
+    "id": "PXL_SHBB1",
+    "filename": "silenthillbutbad.webp",
+    "title": "Silent hill but bad",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2026-03-12 8.38",
+    "raw": false
+  },
+     {
+    "id": "PXL_JOENBRIDGE3",
+    "filename": "joenbridge3.webp",
+    "title": "Cold view",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2026-02-12 14.44",
+    "raw": false
+  },
+       {
+    "id": "PXL_SNOWBUS2",
+    "filename": "snowbus2.webp",
+    "title": "Snow bus 2",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-12-16 15.20",
+    "raw": false
+  },
+     {
+    "id": "PXL_SHBB2",
+    "filename": "silenthillbutbad2.webp",
+    "title": "Silent hill but bad 2",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-12-16 14.50",
+    "raw": false
+  },
+         {
+    "id": "PXL_SNOWBUS1",
+    "filename": "snowbus1.webp",
+    "title": "Snow bus 1",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-11-18 7.14",
+    "raw": false
+  },
+           {
+    "id": "PXL_GJ3",
+    "filename": "goldenjoensuu3.webp",
+    "title": "Golden Joensuu 3",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-11-09 17.34",
+    "raw": false
+  },
+             {
+    "id": "PXL_GJ2",
+    "filename": "goldenjoensuu2.webp",
+    "title": "Golden Joensuu 2",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-11-09 17.31",
+    "raw": false
+  },
+               {
+    "id": "PXL_GJ1",
+    "filename": "goldenjoensuu1.webp",
+    "title": "Golden Joensuu 1",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-11-09 17.11",
+    "raw": false
+  },
+                   {
+    "id": "PXL_JOENBRIDGE1190189287",
+    "filename": "joenbridge2.webp",
+    "title": "Bridge view 2",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-09-19 8.56",
+    "raw": false
+  },
+                     {
+    "id": "PXL_JOENBRIDGE1190189287",
+    "filename": "joenbridge.webp",
+    "title": "Bridge view",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-06-10 16.07",
+    "raw": false
+  },
+  {
+    "id": "PXL_BRIDGE2",
+    "filename": "bridge2.webp",
+    "title": "Sunny scene",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-05-07 14.08",
+    "raw": false
+  },
+   {
+    "id": "PXL_BRIDGE1",
+    "filename": "bridge1.webp",
+    "title": "Sunset scene",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-11-25 14.32",
+    "raw": false
+  },
+    {
+    "id": "PXL_BOATS1",
+    "filename": "boats1.webp",
+    "title": "Cloudy boat",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-10-28 14.23",
+    "raw": false
+  },
+  {
+    "id": "PXL_DOCK",
+    "filename": "dock.webp",
+    "title": "Cloudy dock",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-10-28 14.23",
+    "raw": false
+  },
+    {
+    "id": "PXL_WALKING",
+    "type": "video",
+    "filename": "PXL_walking.mp4",
+    "title": "Windy Walking",
+    "resolution": "1920 x 1080 @ 60 FPS",
+    "format": ".MP4",
+    "location": "Joensuu",
+    "datetime": "2025-10-28 14.23",
+    "raw": false
+  },
+                   {
+    "id": "PXL_JOENLED",
+    "filename": "joensignsled.webp",
+    "title": "Glowing Signs",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-10-11 18.32",
+    "raw": false
+  },
+   {
+    "id": "PXL_SNOW2",
+    "filename": "snowysnow.webp",
+    "title": "Snowy path",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-03-10 18.50",
+    "raw": false
+  },
+  {
+    "id": "PXL_SNOW1",
+    "filename": "snowylatola.webp",
+    "title": "Snowy street",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-03-10 18.45",
+    "raw": false
+  },
+   {
+    "id": "PXL_SHOUSE",
+    "filename": "snowyhouses.webp",
+    "title": "Snowy houses",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-03-10 18.43",
+    "raw": false
+  },
+   {
+    "id": "PXL_RUINS2",
+    "filename": "ruins2.webp",
+    "title": "Winter ruins",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Nurmes",
+    "datetime": "2025-03-04 17.41",
+    "raw": false
+  },
+  {
+    "id": "PXL_ICE",
+    "filename": "ice.webp",
+    "title": "Ice",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2025-01-18 13.39",
+    "raw": false
+  },
+    {
+    "id": "PXL_NIGHTREF4",
+    "filename": "nightref4.webp",
+    "title": "Moon",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2024-11-08 17.34",
+    "raw": false
+  },
+  {
+    "id": "PXL_NIGHTREF3",
+    "filename": "nightref3.webp",
+    "title": "Glows in the dark",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2024-10-20 19.43",
+    "raw": false
+  },
+  {
+    "id": "PXL_NIGHTREF1",
+    "filename": "nightref1.webp",
+    "title": "Bridge of light",
+    "resolution": "3472 x 4624",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2024-09-10 19.10",
+    "raw": false
+  },
+  {
+    "id": "PXL_NIGHTREF2",
+    "filename": "nightref2.webp",
+    "title": "Reflections",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2024-09-10 19.10",
+    "raw": false
+  },
+  {
+    "id": "PXL_BEACH1",
+    "filename": "beach1.webp",
+    "title": "Beach",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2024-09-09 18.55",
+    "raw": false
+  },
+  {
+    "id": "PXL_TORI1",
+    "filename": "joensuutori1.webp",
+    "title": "Joensuu Keskusta",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Joensuu",
+    "datetime": "2024-09-09 18.03",
+    "raw": false
+  },
+  {
+    "id": "PXL_ROADNURMES",
+    "filename": "roadnurmes.webp",
+    "title": "Summer road",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Nurmes",
+    "datetime": "2024-07-18 21.46",
+    "raw": false
+  },
+  {
+    "id": "PXL_TRACKS1",
+    "filename": "tracks1.webp",
+    "title": "Tracks",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Nurmes",
+    "datetime": "2024-07-18 21.42",
+    "raw": false
+  },
+     {
+    "id": "PXL_RUINS1",
+    "filename": "ruins1.webp",
+    "title": "Summer ruins",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Nurmes",
+    "datetime": "2024-07-12 21.11",
+    "raw": false
+  },
+    {
+    "id": "PXL_FLOWERS1",
+    "filename": "flower1.webp",
+    "title": "Nurmes flower",
+    "resolution": "4624 x 3472",
+    "format": "WebP, jpg",
+    "location": "Nurmes",
+    "datetime": "2024-07-10 21.04",
+    "raw": false
+  }
+]

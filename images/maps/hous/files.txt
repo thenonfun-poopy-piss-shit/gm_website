@@ -1,0 +1,6 @@
+DIRECTORY OF /images/maps/hous
+------------------ 
+[FILE] hous.webp 
+[FILE] hous2.webp 
+------------------ 
+END OF LIST 

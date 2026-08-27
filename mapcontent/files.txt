@@ -1,0 +1,5 @@
+DIRECTORY OF /mapcontent
+------------------ 
+[FILE] THEPAPER.html 
+------------------ 
+END OF LIST 

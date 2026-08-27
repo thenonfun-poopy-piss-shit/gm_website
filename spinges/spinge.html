@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spinge</title>
+    <style>
+	 body {
+            margin: 0;
+            background-color: black;
+            color: white; /* Ensure text is visible on a black background */
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .volume-control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            color: white;
+            font-size: 16px;
+        }
+        .volume-control input[type="range"] {
+            margin-left: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+        <source src="https://files.catbox.moe/69w5y1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="image-container">
+        <a href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants_%28character%29">
+            <img src="https://thenonfun.neocities.org/images/spinges/spinge.webp" alt="he" class="center">
+        </a>
+    </div>
+</body>
+</html>

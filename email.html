@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="/engine.js" defer></script>
+  <script src="/achivements.js" ></script>
+  <meta name="view-transition" content="same-origin" />
+  <link href="/transitions.css" rel="stylesheet" type="text/css">
+  <script src="/transitions.js"></script>
+  <script src="/emailengine.js"></script>
+  <script src="/sounds.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email - gm_website</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+    /* ==========================================================================
+          FEEDBACK / BUG REPORT SCREEN (VGUI STYLE)
+          ========================================================================== */
+    .feedback-container {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: #3d3d3d;
+        border: 1px solid #111;
+        padding: 20px;
+        box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+        font-family: "Tahoma", "Verdana", sans-serif;
+        color: #e1e1e1;
+        box-sizing: border-box;
+    }
+    .feedback-header {
+        color: #FFA500;
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #2b2b2b;
+        padding-bottom: 8px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 11px;
+        color: #bbbbbb; 
+    }
+    .form-group input[type="text"],
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        background-color: #222;
+        border: 1px inset #111;
+        color: #e1e1e1;
+        padding: 6px;
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 12px;
+        box-sizing: border-box;
+        outline: none;
+        border-radius: 0; 
+    }
+    .form-group textarea {
+        height: 120px;
+        resize: vertical; 
+    }
+    .form-group input[type="text"]:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border: 1px solid #FFA500;
+        background-color: #1a1a1a;
+    }
+    .source-btn-orange {
+        background: #4c4c4c;
+        border: 1px solid #FFA500;
+        color: #FFA500;
+        padding: 5px 20px;
+        font-size: 12px;
+        font-family: "Tahoma", "Verdana", sans-serif;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: block;
+        width: 100%;
+        border-radius: 0;
+        margin-top: 10px;
+    }
+    .source-btn-orange:hover {
+        background: #FFA500;
+        color: #1a1a1a;
+        border-color: #FFB732;
+    }
+    .source-btn-orange:active {
+        background: #cc8400;
+        border-color: #cc8400;
+    }
+    #formStatus {
+        margin-top: 10px;
+        font-size: 11px;
+        text-align: center;
+        min-height: 14px; 
+    }
+  </style>
+</head>
+<body>
+  <picture id="mainTitle">
+    <source srcset="images/signemail.webp" type="image/webp">
+    <img src="https://assets-thenonfun.neocities.org/images/signemail.png" class="gctr" alt="Title" id="titleImg">
+  </picture>
+  <div class="feedback-container">
+    <div class="feedback-header">System Feedback Terminal</div>
+    <form id="bugReportForm">
+      <div class="form-group">
+        <label for="category">Transmission Type</label>
+        <select id="category" name="category" required>
+          <option value="Feedback">Feedback</option>
+          <option value="Bug report">Bug report</option>
+          <option value="General question">General question</option>
+          <option value="Legal related">Legal related</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="clientInfoGroup" style="display: none; margin-bottom: 15px;">
+        <input type="checkbox" id="includeClientInfo" name="includeClientInfo" style="width: auto; cursor: pointer; margin: 0;">
+        <label for="includeClientInfo" style="margin-bottom: 0; cursor: pointer; display: inline; font-size: 11px;">Include client information</label>
+      </div>
+          
+      <div class="form-group">
+        <label for="title">Subject Title</label>
+        <input type="text" id="title" name="title" placeholder="Brief summary..." required>
+      </div>
+                                                    
+      <div class="form-group">
+        <label for="message">Console Log / Details</label>
+        <textarea id="message" name="message" placeholder="Drop your logs or message here..." required></textarea>
+      </div>
+                                            
+      <div class="form-group">
+        <label for="emailClient">Mail Client Handoff Engine</label>
+        <select id="emailClient" name="emailClient">
+          <option value="default">Default App / Protocol (Proton, Thunderbird, Local Mail)</option>
+          <option value="gmail">Google Gmail Web-Client</option>
+          <option value="outlook">Microsoft Outlook / Hotmail</option>
+          <option value="yahoo">Yahoo Mail</option>
+        </select>
+      </div>
+                          
+      <button type="submit" id="submitBtn" class="source-btn-orange">Transmit Report</button>
+      <div id="formStatus"></div>
+    </form>
+  </div>
+  <br>
+  <p><a href="/" class="white-link">Go back to main page</a></p>
+  <p data-physics>© 2026 The Fun.</p>
+  <p data-physics><a href="legal" class="legal">Legal Disclaimer</a></p>
+  <br>
+</body>
+</html>

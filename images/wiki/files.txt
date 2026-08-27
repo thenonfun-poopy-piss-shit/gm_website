@@ -1,0 +1,8 @@
+DIRECTORY OF /images/wiki
+------------------ 
+[DIR]  faces/ 
+[DIR]  genassets/ 
+[DIR]  maps/ 
+[DIR]  panman/ 
+------------------ 
+END OF LIST 

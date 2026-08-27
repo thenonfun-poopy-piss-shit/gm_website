@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 3s ease-in forwards;
+            opacity: 0; /* Initial opacity */
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+        .image-container {
+            display: flex;
+            gap: 20px; /* Space between images */
+            margin-bottom: 20px; /* Space between images and slider */
+        }
+        img {
+            width: 200px; /* Set fixed width */
+            height: 200px; /* Set fixed height */
+            object-fit: cover; /* Ensures images fit within the given dimensions */
+            border: none;
+        }
+        .volume-control {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+        }
+        .volume-control input[type="range"] {
+            margin-left: 10px;
+            width: 200px;
+        }
+        
+        .achievement-card:not(.unlocked) .achievement-icon[src*="hidden_icon"] {
+    filter: blur(4px) grayscale(100%);
+    opacity: 0.5;
+}
+
+/* Make the text italic for hidden ones */
+.achievement-card:not(.unlocked) h5 {
+    font-style: italic;
+    color: #888;
+}
+
+#achievement-container {
+    position: fixed;
+    bottom: 15px; 
+    right: 15px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.achievement-toast {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 320px;
+    background: #3d3d3d; /* Classic dark grey */
+    background: linear-gradient(to bottom, #4c4c4c 0%, #2b2b2b 100%);
+    border: 1px solid #111;
+    padding: 12px;
+    margin-bottom: 10px; /* Stacks downwards from the top */
+    color: #e1e1e1;
+    font-family: "Tahoma", "Verdana", sans-serif;
+    /* Slide down from above the screen */
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.achievement-toast.show { 
+    transform: translateY(0); 
+    opacity: 1;
+}
+
+.achievement-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border: 1px solid #111;
+    background: #000;
+}
+
+.achievement-text {
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left;
+}
+
+.achievement-text h5 { 
+    margin: 0; 
+    color: #e1e1e1; 
+    font-size: 14px; 
+    text-transform: none; 
+    font-weight: bold;
+}
+
+.achievement-text p { 
+    margin: 4px 0 0; 
+    font-size: 12px; 
+    color: #a0a0a0; 
+}
+    </style>
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+        <source src="https://files.catbox.moe/rfw6hh.mp3" type="audio/mpeg">
+    </audio>
+    <div class="image-container">
+        <a href="https://thenonfun.neocities.org/spinges/spinge.html" >
+                 <picture id="spinge">
+        <source srcset="images/spinges/spinge.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/spinges/spinge.jpg" class="gctr" alt="Title" id="titleImg">
+    </picture>
+        </a>
+        <a href="https://thenonfun.neocities.org/spinges/eyeless.html">
+            <picture id="rsh">
+        <source srcset="images/spinges/rsh.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/spinges/rsh.jpg" class="gctr" alt="Title" id="titleImg">
+    </picture>
+        </a>
+    </div>
+
+    <script>
+        // Select the audio element and the slider
+        const audio = document.getElementById('background-audio');
+        const volumeSlider = document.getElementById('volume-slider');
+
+        // Add an event listener to update the volume
+        volumeSlider.addEventListener('input', (event) => {
+            audio.volume = event.target.value;
+        });
+    </script>
+    
+        <script src="/achivements.js"></script>
+    <script>
+      (function() {
+          // Trigger achievement
+          try {
+              if (typeof unlockAchievement === "function") {
+                  unlockAchievement('spinge');
+              }
+          } catch(err) {
+              console.warn("Achievement system failed to load.");
+          }
+      })();
+    </script>
+    
+</body>
+</html>

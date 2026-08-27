@@ -1,0 +1,67 @@
+
+body {
+    margin: 0;
+    animation: lateralEntry 0.06s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    will-change: transform, opacity;
+    background-color: transparent;
+    backface-visibility: hidden;
+}
+
+body.snap-exit {
+    animation: lateralExit 0.06s cubic-bezier(0.4, 0, 1, 1) forwards !important;
+}
+
+@keyframes lateralEntry {
+    0% { 
+        opacity: 0; 
+        transform: translate3d(-20px, 0, 0); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translate3d(0, 0, 0); 
+    }
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: lateralExit 0.06s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+::view-transition-new(root) {
+    animation: lateralEntry 0.06s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+::view-transition-old(root) {
+    animation: lateralExit 0.06s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+::view-transition-new(root) {
+    animation: lateralEntry 0.06s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes lateralExit {
+    0% { 
+        opacity: 1; 
+        transform: translate3d(0, 0, 0); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translate3d(20px, 0, 0); 
+    }
+}
+
+html {
+    background-color: #1a1a1a; 
+    overflow-x: hidden;
+}
+html.no-transitions body,
+html.no-transitions body.snap-exit {
+    animation: none !important;
+}
+
+html.no-transitions {
+    view-transition-name: none !important; 
+}

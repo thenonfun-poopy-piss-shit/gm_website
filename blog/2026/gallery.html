@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>    
+          <script src="/engine.js" defer></script>
+                <script src="/achivements.js"></script>
+    <meta name="view-transition" content="same-origin" />    
+    <link href="/transitions.css" rel="stylesheet" type="text/css">    
+    <script src="/transitions.js"></script>    
+    <script src="/sounds.js"></script>    
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+      <title>The Wiki - gm_website</title>    
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">    
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+    <picture id="mainTitle">        
+        <source srcset="https://thenonfun.neocities.org/images/signblog.webp" type="image/webp">        
+        <img src="https://assets-thenonfun.neocities.org/images/signblog.png" class="gctr" alt="Title" id="titleImg">    
+    </picture>
+
+    <div class="blog-container">        
+        <h1>Gallery update</h1>
+
+        <div class="blog-layout">            
+            <div class="blog-text">                
+                <p>Currently at a bar in Helsinki waiting for food, however I wanna say that the "photography" page is FINALLY being worked on.</p>                
+                <p>The ui will be semi recycled from the tech tab, however for the gallery itself its unique besides from using the already existing image viewer.. or rather one of the two. The gallery will have a selection of the device i've taken photos on, clicking pn them brings you to induvidual pages with the gallery, i decided to make them sepperated like this so its just easier to know which thing took which.</p>       
+                <p>No link or screenshots this time, still too early for that. soz.</p>
+  
+                
+                <h3 style="text-align: center; margin-top: 30px;">-The Fun, 2026</h3>
+                        <div class="blog-footer">            
+            <p class="last-updated">Entry Written on 19/06/2026.</p>        
+        </div>    
+    </div>
+            </div>        
+        </div>
+
+
+
+    <br>    
+    <p><a href="/blog/blog" class="yellow-link">Return to main blog page.</a></p>
+    <p>© 2026 The Fun.</p>    
+    <p><a href="legal" class="legal">Legal Disclaimer</a></p>
+
+    <div id="image-overlay" onclick="closeFullscreen()">        
+        <img id="fullscreen-image" src="" alt="Fullscreen view">    
+    </div>
+
+    <script>        
+        function openFullscreen(src) {            
+            document.getElementById('fullscreen-image').src = src;            
+            document.getElementById('image-overlay').style.display = 'flex';        
+        }        
+        function closeFullscreen() {            
+            document.getElementById('image-overlay').style.display = 'none';        
+        }    
+    </script>
+</body>
+</html>

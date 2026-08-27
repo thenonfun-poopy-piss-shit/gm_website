@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://thenonfun.neocities.org/engine.js" defer></script>
+    <link href="/transitions.css" rel="stylesheet" type="text/css">
+    <script src="/transitions.js"></script>
+    <script src="https://thenonfun.neocities.org/sounds.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File not found</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    
+    <picture id="mainTitle">
+      <source srcset="/signerror.webp" type="image/webp">
+      <img src="https://assets-thenonfun.neocities.org/signerror.png" class="gctr" alt="Error">
+    </picture>
+    
+    <!-- Updated Error Box -->
+    <div class="error-details">
+      <h1 class="error-heading">404</h1>
+      <h2>File not found.</h2>
+      
+      <p id="source-error-message">Failed to load the page you were looking for. Probably missing from disk/repository.</p>
+      
+      <code>ERR_PAGE:NOTFOUND</code>
+    </div>
+    
+    <p><a href="https://thenonfun.neocities.org">Go back to the homepage</a></p>
+    
+    <br>
+    <p>© 2026 The Fun.</p>
+    <p><a href="https://thenonfun.neocities.org/legal" class="legal">Legal Disclaimer</a></p>
+
+    <script src="/achivements.js"></script>
+    <script>
+      // Original Achievement Logic (Already IE11 safe)
+      (function() {
+          try {
+              if (typeof unlockAchievement === "function") {
+                  unlockAchievement('error_404');
+              }
+          } catch(err) {
+              console.warn("Achievement system failed to load.");
+          }
+      })();
+
+      // IE11-Compatible Source Engine Error Logic
+      document.addEventListener("DOMContentLoaded", function() {
+          var fullPath = window.location.pathname;
+          
+          // Split the path by '/'
+          var pathSegments = fullPath.split('/');
+          
+          // Old-school loop to filter out empty strings (IE11 safe)
+          var validSegments = [];
+          for (var i = 0; i < pathSegments.length; i++) {
+              if (pathSegments[i] !== "") {
+                  validSegments.push(pathSegments[i]);
+              }
+          }
+          
+          var fileName = validSegments.length > 0 ? validSegments.pop() : "The requested file";
+          
+          var errorElement = document.getElementById("source-error-message");
+          if (errorElement) {
+              // Using standard string concatenation instead of backticks
+              errorElement.textContent = "'" + fileName + "' cannot be loaded, probably missing from disk/repository.";
+          }
+      });
+    </script>
+  </body>
+</html>

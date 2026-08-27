@@ -1,0 +1,8 @@
+DIRECTORY OF /wiki/faces
+------------------ 
+[FILE] index.html 
+[FILE] MyDumbassFriend.html 
+[FILE] panman.html 
+[FILE] ThenonFun.html 
+------------------ 
+END OF LIST 

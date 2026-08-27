@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="/engine.js" defer></script>
+    <script src="/achivements.js" ></script>
+  <link href="/transitions.css" rel="stylesheet" type="text/css">
+<script src="/transitions.js"></script>
+    <script src="sounds.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source Maps - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <picture id="mainTitle"> 
+  <source srcset="/sourcemaps.webp" type="image/webp">
+  <img src="https://assets-thenonfun.neocities.org/sourcemaps.png" class="gctr" alt="Source Maps">
+</picture>
+    <h1>Node graph out of date. Rebuilding...</h1>
+    <p>To see unreleased maps, go to the <a href="/srcaOLD">map archives</a></p>
+        
+<style>
+.map-selection-container {
+    text-align: center;
+    padding: 20px 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .map-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 260px;
+    margin: 10px;
+    background-color: #242424; 
+    border: 2px solid #3d3d3d; /* Default border */
+    text-align: left;
+    font-family: Tahoma, Verdana, sans-serif;
+    position: relative;
+    /* Removed transition for maximum IE 11 stability, 
+       but you can add it back if you want a smooth fade */
+  }
+
+  /* The Orange Border on Hover */
+  .map-card:hover {
+    border-color: #ff9d00; 
+  }
+
+  .map-header {
+    background-color: #3d3d3d;
+    padding: 5px 10px;
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+  }
+
+  .map-body {
+    padding: 15px;
+    height: 85px; /* Fixed height keeps the grid aligned */
+  }
+
+  .map-name {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff9d00; 
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+
+  .map-name:hover {
+    text-decoration: underline;
+  }
+
+  .map-info {
+    font-size: 12px;
+    color: #cccccc;
+    line-height: 1.4;
+  }
+ .map-desc {
+    font-size: 10px;
+    color: #cccccc;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .map-tag {
+    color: #666;
+  }
+
+</style>
+ 
+<div class="map-selection-container">
+  
+  <div class="map-card">
+    <div class="map-header">Release: April 2022</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2798064110" class="map-name">WAY</a>
+      <div class="map-info">Author: The Fun/panman</div>
+      <br>
+    <div class="map-desc">WAY is my first released GMOD map. I don't know how I would describe it, other than just "bad"</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">Release: August 2022</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2845154777" class="map-name"><span class="map-tag">gm_</span>officemaze</a>
+      <div class="map-info">Author: The Fun/panman</div>
+            <br>
+    <div class="map-desc">gm_officemaze is a maze, in an office. Our first map to reach four stars on the workshop back then.</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">Release: September 2022</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2866638668" class="map-name"><span class="map-tag">gm_</span>devwater</a>
+      <div class="map-info">Author: The Fun</div>
+                <br>
+    <div class="map-desc">Was originally a map just for testing. Turned out "nice" so i uploaded it.</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">Release: February 2025</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3430036515" class="map-name"><span class="map-tag">de_</span>ram</a>
+      <div class="map-info">Author: The Fun</div>
+       <br>
+    <div class="map-desc">First CS2 map, turned out okay. Recieved a few updates afterwards.</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">Release: March 2025</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3445854069" class="map-name">Scott The Woz Room</a>
+      <div class="map-info">Author: The Fun/panman</div>
+             <br>
+    <div class="map-desc">First GMOD map since 2022, This map is a "recreation" of Scott the Woz'es setup.</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">Release: May 2025</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3482708902" class="map-name"><span class="map-tag">gm_</span>wayremake</a>
+      <div class="map-info">Author: The Fun/panman</div>
+                   <br>
+    <div class="map-desc">Remake of WAY, had an absolutely horrible development from 2023 to 2025.</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">Release: June 2025</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3493379357" class="map-name"><span class="map-tag">gm_</span>housewithbasement</a>
+      <div class="map-info">Author: The Fun</div>
+                         <br>
+    <div class="map-desc">Originally was just a basement, for some reason this map blew up and got 5 stars.</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">Release: August 2025</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3559745194" class="map-name"><span class="map-tag">de_</span>devible</a>
+      <div class="map-info">Author: The Fun</div>
+                               <br>
+    <div class="map-desc">Worst CS2 Map EVER, featuring rotating plates, and a shitty navmesh.</div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <div class="map-header">Release: September 2025</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3563507853" class="map-name"><span class="map-tag">gm_</span>officemaze_remake</a>
+      <div class="map-info">Author: panman/The Fun</div>
+                                <br>
+    <div class="map-desc">Remake of gm_officemaze, had a much better development than gm_wayremake.</div>
+    </div>
+  </div>
+  
+    <div class="map-card">
+    <div class="map-header">Release: August 2026</div>
+    <div class="map-body">
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3775924855" class="map-name"><span class="map-tag">gm_</span>latola</a>
+      <div class="map-info">Author: The Fun</div>
+                                <br>
+    <div class="map-desc">Currently biggest gmod map I've made, a recreation of latolankatu in finland.</div>
+    </div>
+  </div>
+      <hr style="border: 0; border-top: 1px solid #444; margin: 15px 0;">
+</div>
+    <p><a href="index" class="white-link">Go back to main page</a></p>
+    <p>© 2026 The Fun.</p>
+    <p><a href="legal" class="legal">Legal Disclaimer</a></p>
+  </body>
+</html>

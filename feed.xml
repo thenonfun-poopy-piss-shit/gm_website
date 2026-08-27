@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="/rss-style.xml"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+    <title>gm_website</title>
+    <link>https://thenonfun.neocities.org/</link>
+    <description>My little virginity infested slice of the net.</description>
+    <language>en-us</language>
+    
+    <atom:link href="https://thenonfun.neocities.org/feed.xml" rel="self" type="application/rss+xml" />
+        <item>
+      <title>Gallery update</title>
+      <link>https://thenonfun.neocities.org/blog/2026/gallery.html</link>
+      <guid isPermaLink="true">https://thenonfun.neocities.org/blog/2026/gallery.html</guid>
+      <pubDate>Tue, 19 Jun 2026 17:08:00 GMT</pubDate>
+      <description>Gallery, now in development!</description>
+    </item>
+    <item>
+      <title>The Wiki</title>
+      <link>https://thenonfun.neocities.org/blog/2026/wiki.html</link>
+      <guid isPermaLink="true">https://thenonfun.neocities.org/blog/2026/wiki.html</guid>
+      <pubDate>Tue, 16 Jun 2026 08:49:22 GMT</pubDate>
+      <description>The gm_website Wiki beta announcement.</description>
+    </item>
+    <item>
+      <title>An update</title>
+      <link>https://thenonfun.neocities.org/blog/2026/update.html</link>
+      <guid isPermaLink="true">https://thenonfun.neocities.org/blog/2026/update.html</guid>
+      <pubDate>Thu, 04 Jun 2026 18:57:00 GMT</pubDate>
+      <description>aw man i only now got another blog post out?</description>
+    </item>
+    
+    <item>
+      <title>Setting up the blog, oh and merry christmas</title>
+      <link>https://thenonfun.neocities.org/blog/2025/xmas.html</link>
+      <guid isPermaLink="true">https://thenonfun.neocities.org/blog/2025/xmas.html</guid>
+      <pubDate>Wed, 24 Dec 2025 12:00:00 GMT</pubDate>
+      <description>First blog post on chirstmas.</description>
+    </item>
+    
+  </channel>
+</rss>

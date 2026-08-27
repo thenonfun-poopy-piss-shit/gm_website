@@ -1,0 +1,7 @@
+DIRECTORY OF /blog
+------------------ 
+[DIR]  2025/ 
+[DIR]  2026/ 
+[FILE] blog.html 
+------------------ 
+END OF LIST 

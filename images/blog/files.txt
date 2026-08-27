@@ -1,0 +1,6 @@
+DIRECTORY OF /images/blog
+------------------ 
+[FILE] blogpost-wiki.webp 
+[FILE] compat_blogimage_2026updateblogpost.webp 
+------------------ 
+END OF LIST 

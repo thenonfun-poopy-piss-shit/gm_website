@@ -1,0 +1,6 @@
+DIRECTORY OF /images/maps/spa
+------------------ 
+[FILE] spa1.webp 
+[FILE] spa2.webp 
+------------------ 
+END OF LIST 

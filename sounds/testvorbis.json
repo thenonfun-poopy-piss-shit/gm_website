@@ -1,0 +1,10 @@
+{
+  "title": "testVORBIS",
+  "format": ".ogg (audio/vorbis) VORBIS VBR",
+  "length": 120.5,
+  "url": "https://files.mgyt.xyz/thefun/tracktestvorbis.ogg",
+  "metadata": {
+    "bitrate": "VBR",
+    "codec": "vorbis"
+  }
+}

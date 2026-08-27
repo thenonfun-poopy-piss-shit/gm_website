@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device not supported</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    
+    <picture id="mainTitle">
+      <source srcset="/signerror.webp" type="image/webp">
+      <img src="https://assets-thenonfun.neocities.org/signerror.png" class="gctr" alt="Error">
+    </picture>
+    
+    <div class="error-details">
+      <h1 class="error-heading">426</h1>
+      <h2>Upgrade Required</h2>
+      <p>Failed to load the page you were looking for, due to your browser not supporting it.</p>  
+      <p>Update your browser.</p>
+        
+      <!-- ADDED: The missing container for the JavaScript to target -->
+      <ul id="dynamic-error-list"></ul>
+
+      <code>ERR_BROWSER:OUTDATED</code>      
+    </div>
+    
+    <p><a href="https://thenonfun.neocities.org">Go back to the homepage</a></p>
+    
+    <br>
+    <p>© 2026 The Fun.</p>
+    <p><a href="https://thenonfun.neocities.org/legal" class="legal">Legal Disclaimer</a></p>
+    
+<script src="/achivements.js"></script> <!-- Load the functions first -->
+<script src="engine.js"></script> <!-- Then run the engine that uses them -->
+    
+    <!-- Dynamic Error Reading Script (Retro-Compatible) -->
+    <script>
+      (function() {
+          function getQueryParam(name) {
+              var query = window.location.search.substring(1);
+              var vars = query.split("&");
+              for (var i = 0; i < vars.length; i++) {
+                  var pair = vars[i].split("=");
+                  if (pair[0] === name) {
+                      return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+                  }
+              }
+              return null;
+          }
+
+          var missingString = getQueryParam('missing');
+          var errorList = document.getElementById('dynamic-error-list');
+          
+          // This will now work perfectly because the <ul> exists.
+          if (errorList) {
+              errorList.innerHTML = '';
+              
+              if (missingString) {
+                  var features = missingString.split('|');
+                  
+                  for (var i = 0; i < features.length; i++) {
+                      var li = document.createElement('li');
+                      
+                      if ('textContent' in li) {
+                          li.textContent = "Missing: " + features[i];
+                      } else {
+                          li.innerText = "Missing: " + features[i];
+                      }
+                      
+                      errorList.appendChild(li);
+                  }
+              } else {
+                  var fallbackLi = document.createElement('li');
+                  if ('textContent' in fallbackLi) {
+                      fallbackLi.textContent = "General feature incompatibility or outdated engine.";
+                  } else {
+                      fallbackLi.innerText = "General feature incompatibility or outdated engine.";
+                  }
+                  errorList.appendChild(fallbackLi);
+              }
+          }
+
+          // Trigger achievement safely
+          try {
+              if (typeof unlockAchievement === "function") {
+                  unlockAchievement('error_426');
+              }
+          } catch(err) {
+              // Shhh
+          }
+      })();
+    </script>
+  </body>
+</html>

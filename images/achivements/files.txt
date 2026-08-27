@@ -1,0 +1,32 @@
+DIRECTORY OF / 
+------------------ 
+[FILE] 400.webp 
+[FILE] 403.webp 
+[FILE] 404.webp 
+[FILE] 410.webp 
+[FILE] 418.webp 
+[FILE] 426.webp 
+[FILE] 503.webp 
+[FILE] bigcommand.webp 
+[FILE] bob.webp 
+[FILE] compa.webp 
+[FILE] degub.webp 
+[FILE] dev_mode.webp 
+[FILE] dir.webp 
+[FILE] firstperson.webp 
+[FILE] first_visit.webp 
+[FILE] hidden_icon.webp 
+[FILE] ie.webp 
+[FILE] legal.webp 
+[FILE] logodeath.webp 
+[FILE] mobile.webp 
+[FILE] note.webp 
+[FILE] phrase.webp 
+[FILE] placeholder.webp 
+[FILE] platinum.webp 
+[FILE] rainbow.webp 
+[FILE] spin.webp 
+[FILE] spinge.webp 
+[FILE] thirdperson.webp 
+------------------ 
+END OF LIST 

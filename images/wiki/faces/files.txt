@@ -1,0 +1,18 @@
+DIRECTORY OF /images/wiki/faces
+------------------ 
+[FILE] agemaxxing.webp 
+[FILE] confuse.webp 
+[FILE] decomposing_2.webp 
+[FILE] dmbs.webp 
+[FILE] dumbassfriend.webp 
+[FILE] excited.webp 
+[FILE] fassion.webp 
+[FILE] how2drinkwater.webp 
+[FILE] minecraftmaxxing.webp 
+[FILE] natual.webp 
+[FILE] opened_mouth.webp 
+[FILE] stare.webp 
+[FILE] thenonfun-main.webp 
+[FILE] yummu.webp 
+------------------ 
+END OF LIST 

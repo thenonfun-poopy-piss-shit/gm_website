@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <script src="/engine.js" defer></script>
+    <script src="/achivements.js" ></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/transitions.css" rel="stylesheet" type="text/css">
+    <script src="/transitions.js"></script>
+    <script src="/sounds.js"></script>
+    <title>My PC - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style>
+      /* --- DEVICE PAGE CONTAINER --- */
+      .device-container {
+        max-width: 950px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #1a1a1a; 
+        border: 1px solid #333;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        box-sizing: border-box;
+      }
+
+      .device-layout {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-left: -20px; /* Counteracts IE11 margin gap padding fallback */
+      }
+
+      /* --- LEFT COLUMN: TEXT & SPECS --- */
+      .device-text {
+        -ms-flex: 1 1 0px;
+        flex: 1 1 0px;
+        min-width: 320px;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+
+      .device-text h1 {
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #fff;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+      }
+
+      .device-intro {
+        text-align: left !important;
+        font-size: 16px;
+        color: #cccccc;
+        line-height: 1.5;
+        margin-bottom: 25px;
+      }
+
+      .spec-section-title {
+        text-align: left !important;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #FFA500;
+        margin: 20px 0 10px 0;
+        letter-spacing: 1px;
+        font-weight: bold;
+      }
+
+      /* Overriding global center text safely for lists */
+      .device-spec-list {
+        text-align: left !important;
+        padding: 0;
+        margin: 0 0 25px 0;
+        list-style: none;
+      }
+
+      .device-spec-list li {
+        position: relative;
+        padding-left: 20px;      
+        margin-bottom: 8px;
+        font-size: 15px;
+        color: #cccccc;
+        line-height: 1.4;
+        text-align: left !important;
+      }
+
+      .device-spec-list li::before {
+        content: "- ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #FFA500;
+        font-weight: bold;
+      }
+
+      .device-footer-note {
+        text-align: left !important;
+        font-size: 14px;
+        font-style: italic;
+        color: #888;
+        line-height: 1.5;
+        border-top: 1px dashed #333;
+        padding-top: 15px;
+        margin-top: 25px;
+      }
+
+      /* --- RIGHT COLUMN: IMAGES --- */
+      .device-image-container {
+        -ms-flex: 1.2 1 0px;
+        flex: 1.2 1 0px;
+        min-width: 320px;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+
+      .device-img-wrapper {
+        background: #111; 
+        padding: 12px;
+        border: 1px solid #333;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+      }
+
+      .device-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.2s ease; 
+        cursor: zoom-in;
+      }
+
+      .device-image:hover {
+        transform: scale(1.02);
+      }
+
+      /* Navigation Utilities */
+      .nav-links {
+        margin-top: 30px;
+        text-align: center;
+      }
+      .nav-links p {
+        margin: 8px 0;
+      }
+
+    </style>
+  </head>
+  <body>
+  
+    <div class="device-container">
+      <div class="device-layout">
+        
+        <div class="device-text">
+          <h1>Main PC</h1>
+          <p class="device-intro">This is my main desktop PC i built around December 2024 to January 2025.</p>
+          
+          <div class="spec-section-title">System Specifications</div>
+          <ul class="device-spec-list">
+            <li>Intel Core i5-12400F</li>
+            <li>Intel Arc A750 ASRock Challenger</li>
+            <li>Windows 11 Enterprise IoT LTSC 24H2</li>
+            <li>ARCTIC Freezer 36 Black</li>
+            <li>2 x 8 GB (16 GB) DDR4 @ 3200MT/s</li>
+            <li>MSI PRO b760M-P DDR4</li>
+            <li>Corsair CX 650 W Bronze</li>
+            <li>KOLINK Stronghold M</li>
+          </ul>
+          
+          <div class="spec-section-title">Primary Workload</div>
+          <ul class="device-spec-list">
+            <li>Gaming</li>
+            <li>Video and Image Editing</li>
+            <li>Source Engine Stuff</li>
+            <li>Other more boring tasks</li>
+          </ul>
+                              <div class="spec-section-title">Status</div>
+          <ul class="device-spec-list">
+            <li>Working, low storage.</li>
+          </ul>
+          <p class="device-footer-note">It's only got one 512 GB M.2 ssd that i got for free from my old laptop before selling it, and one 200 GB sata ssd, shit sucks.</p>
+        </div>
+
+        <div class="device-image-container">
+          <div class="device-img-wrapper">
+            <picture>
+              <source srcset="/images/devices/pcBIG.webp" type="image/webp">
+              <img src="https://assets-thenonfun.neocities.org/images/devices/pcBIG.png" alt="Main PC picture" class="device-image" onclick="openFullscreen(this.src)">
+            </picture>
+          </div>
+          <div class="device-img-wrapper">
+            <picture>
+              <source srcset="/images/devices/fastfetchmainpc.webp" type="image/webp">
+              <img src="https://assets-thenonfun.neocities.org/images/devices/fastfetchmainpc.png" alt="Fastfetch screenshot" class="device-image" onclick="openFullscreen(this.src)"> 
+            </picture>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <dialog id="image-overlay" onclick="closeFullscreen(event)">
+      <img id="fullscreen-image" src="" alt="Fullscreen view">
+    </dialog>
+
+    <div class="nav-links">
+      <p><a href="/tech" class="white-link">Go back to tech page</a></p>
+      <p>© 2026 The Fun.</p>
+      <p><a href="/legal" class="legal">Legal Disclaimer</a></p>
+    </div>
+
+    <script>
+      const overlay = document.getElementById('image-overlay');
+      const fullImg = document.getElementById('fullscreen-image');
+
+      function openFullscreen(src) {
+        fullImg.src = src;
+        
+        // Use native dialog if supported (Modern browsers)
+        if (typeof overlay.showModal === "function") {
+          overlay.showModal();
+        } else {
+          // IE11 Fallback: Manually inject the fixed positioning
+          overlay.style.display = 'flex';
+          overlay.style.position = 'fixed';
+          overlay.style.top = '0';
+          overlay.style.left = '0';
+          overlay.style.width = '100%';
+          overlay.style.height = '100%';
+          overlay.style.backgroundColor = 'rgba(0,0,0,0.9)';
+          overlay.style.zIndex = '1000';
+          overlay.style.alignItems = 'center';
+          overlay.style.justifyContent = 'center';
+        }
+      }
+
+      function closeFullscreen(event) {
+        // Clicking the dialog backdrop registers as clicking the dialog itself
+        if (event.target === overlay) {
+          if (typeof overlay.close === "function") {
+            overlay.close();
+          } else {
+            // IE11 Fallback cleanup
+            overlay.style.display = 'none';
+          }
+          fullImg.src = ""; // Clear src to save resources
+        }
+      }
+    </script>
+
+  </body>
+</html>

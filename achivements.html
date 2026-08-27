@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <script src="/engine.js" defer></script>
+  <link href="/transitions.css" rel="stylesheet" type="text/css">
+<script src="/transitions.js"></script>
+    <meta charset="UTF-8">
+        <script src="sounds.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - gm_website</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<script src="/achivements.js"></script>
+</head>
+<body>
+    <picture id="mainTitle">      
+        <source srcset="images/signachivements.webp" type="image/webp">      
+        <img src="https://assets-thenonfun.neocities.org/signachivements.png" class="gctr" alt="Title" id="titleImg">    
+    </picture>
+    
+    <h1>"Catch 'em all"</h1>
+    <p>See all your achievements from here.</p>
+
+    <div id="achievements-list"></div>
+
+    <p><a href="/" class="white-link">Go back to main page</a></p>
+    <p>© 2026 The Fun.</p>
+    <p><a href="legal" class="legal">Legal Disclaimer</a></p>
+   <script>
+function renderAchievements() {
+    var list = document.getElementById('achievements-list');
+    var rawData = localStorage.getItem('achievements');
+    var unlocked = JSON.parse(rawData || '{}');
+    var ua = window.navigator.userAgent;
+    var isIE = !!document.documentMode;
+
+    list.innerHTML = '';
+
+    var keys = Object.keys(ACHIEVEMENT_DATA);
+    for (var i = 0; i < keys.length; i++) {
+        var id = keys[i];
+        var data = ACHIEVEMENT_DATA[id];
+        var dateUnlocked = unlocked[id];
+        var isPossible = getPlatformCompatibility(id);
+
+        // logic poo
+        var displayName = data.name;
+        var displayDesc = data.desc;
+        var displayIcon = data.icon;
+
+        if (data.hidden && !dateUnlocked) {
+            displayName = "???";
+            displayDesc = "This achievement is hidden. Keep exploring!";
+            displayIcon = "hidden_icon";
+        }
+
+        //cards
+        var card = document.createElement('div');
+        card.className = "achievement-card";
+        
+        if (dateUnlocked) {
+            card.className += " unlocked";
+        } else if (!isPossible) {
+            card.className += " impossible";
+        }
+
+        var imgSrc = isIE //ie fallback for achievemt icons
+            ? 'https://assets-thenonfun.neocities.org/images/achivements/' + displayIcon + '.png'
+            : 'images/achivements/' + displayIcon + '.webp';
+
+        var html = '<img src="' + imgSrc + '" class="achievement-icon">' +
+                   '<div class="achievement-text">' +
+                   '<h5>' + displayName + '</h5>' +
+                   '<p>' + displayDesc + '</p>';
+
+        if (dateUnlocked) {
+            html += '<small style="color:#66c0f4">Unlocked: ' + new Date(dateUnlocked).toLocaleDateString() + '</small>';
+        } else if (!isPossible) {
+            html += '<span class="impossible-tag">N/A ON THIS DEVICE</span>';
+        }
+
+        html += '</div>';
+        card.innerHTML = html;
+        list.appendChild(card);
+    }
+}
+
+// CALL THE FUNCTION TO ACTUALLY RUN IT
+renderAchievements();
+</script>
+</body>
+</html>

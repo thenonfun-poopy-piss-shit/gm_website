@@ -1,0 +1,16 @@
+DIRECTORY OF /images/maps
+------------------ 
+[DIR]  bih/ 
+[DIR]  bmt/ 
+[DIR]  cen/ 
+[DIR]  destore/ 
+[DIR]  fish/ 
+[DIR]  hotel/ 
+[DIR]  hotelmaze/ 
+[DIR]  hou/ 
+[DIR]  hous/ 
+[DIR]  pol/ 
+[DIR]  spa/ 
+[DIR]  zmbf/ 
+------------------ 
+END OF LIST 

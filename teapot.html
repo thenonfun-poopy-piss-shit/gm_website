@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/engine.js" defer></script>
+    <script src="/achivements.js" ></script>
+    <link href="/transitions.css" rel="stylesheet" type="text/css">
+    <script src="/transitions.js"></script>
+    <script src="sounds.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teapot - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <picture id=mainTitle>
+      <source srcset="/signerror.webp" type="image/webp">
+      <img src="https://assets-thenonfun.neocities.org/signerror.png" class="gctr" alt="Error">
+    </picture>
+    
+    <!-- Updated Error Box -->
+    <div class="error-details">
+      <h1 class="error-heading">418</h1>
+      <h2>I'm a Teapot.</h2>
+      <p>Since you're here finally, care for some tea?</p>
+      
+      <!-- Interactive Teapot Image remains untouched -->
+      <img src="https://assets-thenonfun.neocities.org/images/teapot.png" 
+           id="teapot" 
+           class="teapot-small" 
+           alt="A stubborn teapot">
+
+      <code>ERR_DEVICE:TEAPOT</code>
+    </div>
+
+    <p><a href="https://thenonfun.neocities.org">Go back to the homepage</a></p>
+
+    <br>
+    <p>© 2026 The Fun.</p>
+    <p><a href="https://thenonfun.neocities.org/legal" class="legal">Legal Disclaimer</a></p>
+
+    <script>
+      const teapot = document.getElementById('teapot');
+      
+      teapot.addEventListener('click', () => {
+        teapot.classList.add('rocking');
+        
+        setTimeout(() => {
+          teapot.classList.remove('rocking');
+        }, 500);
+      });
+    </script>
+    
+    <script src="/achivements.js"></script>
+    <script>
+      (function() {
+          // Trigger achievement
+          try {
+              if (typeof unlockAchievement === "function") {
+                  unlockAchievement('error_418');
+              }
+          } catch(err) {
+              console.warn("Achievement system failed to load.");
+          }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+
+.debug-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(28, 28, 28, 0.85);
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  padding: 10px;
+  border-radius: 2px;
+  z-index: 10; /* Keeps it above video layer */
+  width: 260px;
+  pointer-events: auto;
+}
+
+.debug-row {
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.debug-row strong {
+  color: #aaaaaa;
+}
+
+.debug-close-btn {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+}
+.debug-close-btn:hover {
+  color: #ff0000;
+}
+/* ==========================================================================
+   Base Player Layout & Centering
+   ========================================================================== */
+.video-container {
+  position: relative;
+  width: 640px;
+  max-width: 100%;
+  background: #000;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  margin: 20px auto; /* Centers the player naturally on your page layout */
+  position: relative; /* Essential for absolute child positioning */
+}
+
+.video-container video {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   IE11 Fullscreen Bugfix
+   ========================================================================== */
+#videoContainer:-ms-fullscreen {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  background: #000 !important;
+}
+
+#videoContainer:-ms-fullscreen video {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#videoContainer:fullscreen,
+#videoContainer:-webkit-full-screen {
+  background: #000 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+#videoContainer:fullscreen video,
+#videoContainer:-webkit-full-screen video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  margin: 0 auto; /* Native centering fallback */
+  display: block !important;
+}
+
+/* ==========================================================================
+   Control Bar Styling
+   ========================================================================== */
+.custom-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* REQUIRED FOR IE11 */
+  box-sizing: border-box; /* Prevents padding from breaking the 100% width in IE11 */
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2147483647;
+}
+
+.video-container:hover .custom-controls {
+  opacity: 1;
+}
+
+.controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  width: 100%; /* Extra safety for IE11 */
+}
+
+.left-controls, .right-controls {
+  display: flex;
+  align-items: center;
+}
+
+.player-btn {
+  background: #ff9900; /* Source Engine Orange */
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;    /* Matches font-size for predictable line heights */
+  min-width: 32px;
+  height: 24px;         /* Forces an identical fixed height across ALL browsers */
+  box-sizing: border-box; 
+  vertical-align: middle;
+}
+
+#muteBtn {
+  padding: 0 !important; /* Clears horizontal padding so the icon centers perfectly */
+  width: 32px;           /* Perfectly matches the min-width of text buttons */
+  text-align: center;
+}
+
+#muteIcon {
+  width: 14px !important;       /* Hard constraint for Chrome & IE intrinsic scaling */
+  height: 14px !important;      /* Hard constraint for Chrome & IE intrinsic scaling */
+  max-width: 14px !important;
+  max-height: 14px !important;
+  display: inline-block !important;
+  vertical-align: middle;       /* Vertically centers the PNG inside the button */
+  margin: 0 auto !important;
+  border: none;
+  pointer-events: none;         /* Ensures clicks register on the button element */
+}
+
+.player-btn:hover {
+  background: #ffaa22;
+}
+
+/* ==========================================================================
+   Progress Bar & Volume Slider Custom Layouts
+   ========================================================================== */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #444;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #ff9900;
+}
+
+/* Volume range slider custom style overrides */
+.volume-slider {
+  -webkit-appearance: none;
+  width: 80px;
+  background: #444;
+  height: 6px;
+  outline: none;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+/* Knob styling for Webkit/Chromium */
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 14px;
+  background: #ff9900;
+  cursor: pointer;
+}
+
+/* Knob styling for IE11 */
+.volume-slider::-ms-thumb {
+  width: 10px;
+  height: 14px;
+  background: #ff9900;
+  border: none;
+  cursor: pointer;
+}
+
+/* Track filling color rules for IE11 alignment */
+.volume-slider::-ms-fill-lower {
+  background: #ff9900;
+}
+.volume-slider::-ms-fill-upper {
+  background: #444;
+}
+
+/* ==========================================================================
+   Loading Indicator (Static PNG Centering)
+   ========================================================================== */
+.loading-spinner {
+  display: none; /* Hidden by default; managed via JS */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* IE11 alignment support fallback */
+  z-index: 100;
+  pointer-events: none; /* Let clicks pass through to the video */
+}
+
+.loading-spinner img {
+  max-width: 100px; /* Constrains dimensions uniformly */
+  height: auto;
+  display: block;
+}

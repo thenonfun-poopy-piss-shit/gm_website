@@ -1,0 +1,10 @@
+DIRECTORY OF /images/maps/destore
+------------------ 
+[FILE] dstr1.webp 
+[FILE] dstr2.webp 
+[FILE] dstr3.webp 
+[FILE] dstr4.webp 
+[FILE] dstr5.webp 
+[FILE] dstr6.webp 
+------------------ 
+END OF LIST 

@@ -1,0 +1,7 @@
+DIRECTORY OF /wiki/maps
+------------------ 
+[FILE] gm_latola.html 
+[FILE] gm_wayremake.html 
+[FILE] index.html 
+------------------ 
+END OF LIST 

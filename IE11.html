@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IE 11 Safe Haven</title>
+    <style>
+        body {
+            background-color: #008080;
+            color: white;
+            font-family: "MS Sans Serif", Geneva, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the ActiveX Zone</h1>
+    <p>Feel free to Active you X heart out</p>
+
+    <object id="MediaPlayer" 
+            classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" 
+            width="300" 
+            height="45" 
+            type="application/x-oleobject">
+        <param name="FileName" value="/sounds/RFE.mid">
+        <param name="AutoStart" value="true">
+        <param name="ShowControls" value="true">
+        <p>ERR_BROWSER:NOTSUPPORTED</p>
+    </object>
+<script>
+    function toggleMusic() {
+        var player = document.getElementById('MediaPlayer');
+        // This is a common way to talk to COM objects
+        if (player.playState === 3) {
+            player.Stop();
+        } else {
+            player.Play();
+        }
+    }
+</script>
+
+<button onclick="toggleMusic()">Click for Fun</button>
+</body>
+</html>

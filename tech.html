@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/engine.js" defer></script>
+    <script src="/achivements.js" ></script>
+    <link href="/transitions.css" rel="stylesheet" type="text/css">
+    <script src="/transitions.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <script src="sounds.js"></script>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style>
+      /* --- TECH GALLERY STYLES --- */
+      
+      .tech-gallery {
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+        justify-content: center; /* Centers the devices nicely */
+        gap: 30px; /* Space between each device */
+        margin: 40px auto;
+        max-width: 800px; /* Keeps the gallery from getting too wide on huge monitors */
+      }
+
+      .tech-item {
+        /* Removes the default underline/blue color from links */
+        text-decoration: none; 
+      }
+
+      .tech-item img {
+        width: 180px; /* Adjust this to make your devices bigger or smaller */
+        height: auto;
+        /* The transition is what makes the growing effect smooth instead of instant */
+        transition: transform 0.2s ease-in-out; 
+        
+        /* Optional: A drop-shadow filter looks amazing on transparent PNGs/WebPs 
+           because it perfectly hugs the shape of the device instead of making a box */
+        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
+      }
+
+      .tech-item:hover img {
+        /* scale(1.1) means it grows to 110% of its normal size */
+        transform: scale(1.1); 
+      }
+    </style>
+  </head>
+  <body>
+  <picture id="mainTitle">
+    <source srcset="/images/signhardware.webp" type="image/webp">
+    <img src="https://assets-thenonfun.neocities.org/images/signhardware.png" class="gctr" alt="Banner Tech">
+  </picture>
+
+  <div class="tech-gallery">
+    <a href="/devices/pc.html" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/pc.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/pc.png" alt="My PC">
+      </picture>
+    </a>
+
+    <a href="/devices/thinkpadE14.html" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/thinkpad.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/thinkpad.png" alt="Lenovo Thinkpad">
+      </picture>
+    </a>
+
+    <a href="/devices/fujitsu" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/fujitsu.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/fujitsu.png" alt="Fujtsu Lifebook">
+      </picture>
+    </a>
+
+    <a href="notready" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/sd.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/sd.png" alt="VALVe Steam Deck">
+      </picture>
+    </a>
+
+    <a href="notready" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/powershotSX10IS.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/powershotSX10IS.png" alt="Canon Powershot SX10 IS">
+      </picture>
+    </a>
+
+    <a href="notready" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/powershotA540.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/powershotA540.png" alt="Canon Powershot A540">
+      </picture>
+    </a>
+
+    <a href="notready" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/PanasonicNVGX7.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/PanasonicNVGX7.png" alt="Panasonic NV-GX7">
+      </picture>
+    </a>
+
+    <a href="notready" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/Pixel7a.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/Pixel7a.png" alt="Google Pixel 7a">
+      </picture>
+    </a>
+
+    <a href="/devices/lumia930" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/Lumia930.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/Lumia930.png" alt="Nokia Lumia 930">
+      </picture>
+    </a>
+
+    <a href="notready" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/Lumia820.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/Lumia820.png" alt="Nokia Lumia 820">
+      </picture>
+    </a>
+
+    <a href="/devices/NokiaN82" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/NokiaN82.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/NokiaN82.png" alt="Nokia N82">
+      </picture>
+    </a>
+
+    <a href="notready" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/Nokia3710Fold.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/Nokia3710Fold.png" alt="Nokia 3710 Fold">
+      </picture>
+    </a>
+
+    <a href="notready" class="tech-item">
+      <picture>
+        <source srcset="/images/devices/NokiaC2.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/devices/NokiaC2.png" alt="Nokia C2-01">
+      </picture>
+    </a>
+  </div>
+    <p><a href="/" class="white-link">Go back to main page</a></p>
+    <p>© 2026 The Fun.</p>
+    <p><a href="legal" class="legal">Legal Disclaimer</a></p>
+  </body>
+</html>

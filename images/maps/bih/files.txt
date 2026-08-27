@@ -1,0 +1,6 @@
+DIRECTORY OF /images/maps/bih
+------------------ 
+[FILE] bih.webp 
+[FILE] bih2.webp 
+------------------ 
+END OF LIST 

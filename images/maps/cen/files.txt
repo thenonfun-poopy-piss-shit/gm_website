@@ -1,0 +1,6 @@
+DIRECTORY OF /images/maps/cen
+------------------ 
+[FILE] cen.webp 
+[FILE] cen2.webp 
+------------------ 
+END OF LIST 

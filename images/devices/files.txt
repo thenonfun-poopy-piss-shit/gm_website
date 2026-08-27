@@ -1,0 +1,21 @@
+DIRECTORY OF /images/devices
+------------------ 
+[FILE] fastfetchmainpc.webp 
+[FILE] fujitsu.webp 
+[FILE] honor9xicon.webp 
+[FILE] laptop1big.webp 
+[FILE] Lumia820.webp 
+[FILE] Lumia930.webp 
+[FILE] Nokia3710Fold.webp 
+[FILE] NokiaC2.webp 
+[FILE] NokiaN82.webp 
+[FILE] PanasonicNVGX7.webp 
+[FILE] pc.webp 
+[FILE] pcBIG.webp 
+[FILE] Pixel7a.webp 
+[FILE] powershotA540.webp 
+[FILE] powershotSX10IS.webp 
+[FILE] sd.webp 
+[FILE] thinkpad.webp 
+------------------ 
+END OF LIST 

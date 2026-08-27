@@ -1,0 +1,18 @@
+TriMess Error Codes
+
+THE FUN, 2026
+
+-- WARNINGS, site will stil load and most likely work fine, with maybe a few things broken. --
+WARN_DEVICE:MOBILECLIENT = Triggers whenever the site detects a phone has entered the website. Phones have graphical issues on this site,so thats why its here
+WARN_BROWSER:WEBPFAIL = Triggers whenever the browser fails at loading a WebP file, since WebP is the main image format used on this website, the warning it given. without WebP the site would be only text and CSS, If warning IS triggered, site will replace all webp images to PNG 8 images holded on assets-thenonfun.neocities.org.
+WARN_BROWSER:OUTDATED = Triggers whenever the site detects an old browser being used, like old edge, or IE.
+-- ERRORS, site/feature will not be accessible. --
+ERR_BROWSER:OUTDATED = Basically more severe version of WARN_BROWSER:OUTDATED, this stops the page/feature from loading. Used as the 426 error screen and some commands.
+ERR_DEVICE:NOTSUPPORTED = When the website detects you trying to visit a part of the site thats marked for PC only. Used as the 400 error screen.
+ERR_DEVICE:TEAPOT = You can't brew coffee on that thing. Used as the 418 error screen.
+ERR_PAGE:GONE = Whenever the client goes to a site on the server that is classified as either legacy, and something that will never be completed again. Used as the 410 error screen.
+ERR_PAGE:NOTALLOWED = Forbidden. Used when trying to access things like testing pages on the site. Used as the 403 error screen.
+ERR_PAGE:NOTFOUND = Loads whenever the file cannot be found. Used as the 404 error screen.
+ERR_PAGE:UPDATINGBUSY = Gets used Whenever an already existing page is currently getting updated. Used as the 503 error screen.
+ERR_PAGE:BUSY = Used whenever a page thats not completed yet, already has a link on the index page for it. Used as the 503 error screen.
+ERR_SOUND:NOTFOUND = Used whenever using the "playsound" command, and the Sound you decide to play cannot be loaded due to the server returning a "not found" or similar error.

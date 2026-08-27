@@ -1,0 +1,6 @@
+DIRECTORY OF /images/maps/bmt
+------------------ 
+[FILE] bmt1.webp 
+[FILE] bmt2.webp 
+------------------ 
+END OF LIST 

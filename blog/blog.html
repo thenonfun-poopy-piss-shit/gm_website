@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+          <script src="/engine.js" defer></script>
+                <script src="/achivements.js"></script>
+    <meta name="view-transition" content="same-origin" />
+    <link href="/transitions.css" rel="stylesheet" type="text/css">
+    <script src="/transitions.js"></script>
+    <script src="/sounds.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+        .rss-badge {
+            font-family: monospace;
+            font-size: 12px;
+            color: #FFA500 !important;
+            background: #222;
+            border: 1px solid #444;
+            padding: 4px 10px;
+            text-decoration: none;
+            display: inline-block;
+            text-shadow: none !important; /* Prevents global link glow on hover */
+            transition: background 0.1s, color 0.1s;
+        }
+        .rss-badge:hover {
+            background: #FFA500;
+            color: #000 !important;
+            border-color: #FFA500;
+            text-shadow: none !important;
+        }
+        
+        /* Layout structures matching the custom RSS look */
+        .feed-item {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #2b2b2b;
+            text-align: left;
+        }
+        .feed-item:last-child {
+            border-bottom: none;
+            margin-bottom: 10px;
+            padding-bottom: 0;
+        }
+        .feed-item h2 {
+            text-align: left;
+            margin: 0 0 6px 0;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .feed-meta {
+            font-family: monospace;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .feed-desc {
+            color: #cccccc;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <picture id="mainTitle">
+        <source srcset="https://thenonfun.neocities.org/images/signblog.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/signblog.png" class="gctr" alt="Title" id="titleImg">
+    </picture>
+
+    <div class="blog-container">
+        <h1>Is Shakespeare really dead?</h1>
+        
+        <div class="blog-layout">
+            <div class="blog-text">
+                <p style="text-align: center; font-size: 16px; color: #cccccc; margin-bottom: 20px;">
+                    Here you can find me talking about random shit. Probably something about what I'm doing when writing the entry.
+                </p>
+                
+                <p style="text-align: center; margin-bottom: 40px;">
+                    <a href="/feed.xml" class="rss-badge" target="_blank">RSS FEED</a>
+                                    <div style="border-top: 2px solid #FFA500; padding-top: 25px;">
+                                    
+                </p>
+                    <div class="feed-item">
+                        <h2><a href="2026/gallery" class="yellow-link">Gallery update</a></h2>
+                        <div class="feed-meta">Published: Fri, 19 Jun 2026 17:08:00 GMT</div>
+                        <div class="feed-desc">Gallery, now in development!</div>
+                    </div>
+
+                    <div class="feed-item">
+<h2><a href="2026/wiki" class="yellow-link">The Wiki</a></h2>
+                        <div class="feed-meta">Published: Tue, 16 Jun 2026 08:49:22 GMT</div>
+                        <div class="feed-desc">The gm_website Wiki beta announcement</div>
+                    </div>
+                    <div class="feed-item">
+                        <h2><a href="2026/update" class="yellow-link">An update</a></h2>
+                        <div class="feed-meta">Published: Thu, 04 Jun 2026 18:57:00 GMT</div>
+                        <div class="feed-desc">aw man i only now got another blog post out?</div>
+                    </div>
+                    
+                    <div class="feed-item">
+                        <h2><a href="2025/xmas" class="yellow-link">Setting up the blog, oh and merry christmas</a></h2>
+                        <div class="feed-meta">Published: Wed, 24 Dec 2025 12:00:00 GMT</div>
+                        <div class="feed-desc">First blog post on chirstmas.</div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <p><a href="/" class="white-link">Go back to main page</a></p>
+    
+    <p>© 2026 The Fun.</p>
+    <p><a href="/legal" class="legal">Legal Disclaimer</a></p>
+</body>
+</html>

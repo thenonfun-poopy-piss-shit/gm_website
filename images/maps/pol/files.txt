@@ -1,0 +1,6 @@
+DIRECTORY OF /images/maps/pol
+------------------ 
+[FILE] pol.webp 
+[FILE] pol2.webp 
+------------------ 
+END OF LIST 

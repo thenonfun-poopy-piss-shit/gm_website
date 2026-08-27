@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+          <script src="/engine.js" defer></script>
+                <script src="/achivements.js"></script>
+    <meta name="view-transition" content="same-origin" />
+    <link href="/transitions.css" rel="stylesheet" type="text/css">
+    <script src="/transitions.js"></script>
+    <script src="/sounds.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting up - gm_website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+    <picture id="mainTitle">
+        <source srcset="https://thenonfun.neocities.org/images/signblog.webp" type="image/webp">
+        <img src="https://assets-thenonfun.neocities.org/images/signblog.png" class="gctr" alt="Title" id="titleImg">
+    </picture>
+
+    <div class="blog-container">
+        <h1>Setting up the blog, oh and merry christmas</h1>
+
+        <div class="blog-layout">
+            <div class="blog-text">
+                <p>As I type this out, it is currently 2:25 am on the 24th of december, Merry Christmas!</p>
+                <p>I'm also currently working on making this simple blog work. It's been going well.</p>
+ 
+               <!-- <div class="blog-image-container"> -->
+                  <!--    <img src="https://via.placeholder.com/600x300/222/FFA500?text=Insert+Cool+Blog+Image" alt="Blog Image" class="blog-image" onclick="openFullscreen(this.src)"> -->
+                  <!--    <span class="image-caption">Click to zoom in! Working on that RSS feed next.</span> -->
+                <!-- </div> -->
+
+                <p>Updates to this website have been slow, since I've been working on other things, However I'm still gonna work on this, when I have time and I actually feel like it.</p>
+                <p>Anyways, I don't have anything much else to say currently.</p>
+
+                <h3 style="text-align: center; margin-top: 30px;">Merry Christmas! -The Fun, 2025</h3>
+            </div>
+        </div>
+
+        <div class="blog-footer">
+            <p class="last-updated">Entry Written on 24/12/2025.</p>
+        </div>
+    </div>
+
+    <br>
+    <p><a href="/blog/blog" class="yellow-link">Return to main blog page.</a></p>
+
+    <p>© 2026 The Fun.</p>
+    <p><a href="legal" class="legal">Legal Disclaimer</a></p>
+
+    <div id="image-overlay" onclick="closeFullscreen()">
+        <img id="fullscreen-image" src="" alt="Fullscreen view">
+    </div>
+
+    <script>
+        function openFullscreen(src) {
+            document.getElementById('fullscreen-image').src = src;
+            document.getElementById('image-overlay').style.display = 'flex';
+        }
+        function closeFullscreen() {
+            document.getElementById('image-overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

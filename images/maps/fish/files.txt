@@ -1,0 +1,9 @@
+DIRECTORY OF /images/maps/fish
+------------------ 
+[FILE] fish.webp 
+[FILE] fish2.webp 
+[FILE] fish3.webp 
+[FILE] fish4.webp 
+[FILE] fish5.webp 
+------------------ 
+END OF LIST 

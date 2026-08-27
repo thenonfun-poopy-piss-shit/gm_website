@@ -1,0 +1,8 @@
+DIRECTORY OF /images/maps/hotel
+------------------ 
+[FILE] htl1.webp 
+[FILE] htl2.webp 
+[FILE] htl3.webp 
+[FILE] htl4.webp 
+------------------ 
+END OF LIST 
