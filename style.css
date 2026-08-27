@@ -5,6 +5,226 @@
    CHECK OTHER CSS FILES FOR THAT, OR OTHER STYLE TAGS IN CERTAIN
    HTML DOCUMENTS!
    ========================================================================== */
+     /* ==========================================================================
+   Device showcase
+   ========================================================================== */  
+         .device-container {
+        max-width: 950px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #1a1a1a; 
+        border: 1px solid #333;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        box-sizing: border-box;
+      }
+
+      .device-layout {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-left: -20px;
+      }
+
+      .device-text {
+        -ms-flex: 1 1 0px;
+        flex: 1 1 0px;
+        min-width: 320px;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+
+      .device-text h1 {
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #fff;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+      }
+
+      .device-intro {
+        text-align: left !important;
+        font-size: 16px;
+        color: #cccccc;
+        line-height: 1.5;
+        margin-bottom: 25px;
+      }
+
+      .spec-section-title {
+        text-align: left !important;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #FFA500;
+        margin: 20px 0 10px 0;
+        letter-spacing: 1px;
+        font-weight: bold;
+      }
+
+      .device-spec-list {
+        text-align: left !important;
+        padding: 0;
+        margin: 0 0 25px 0;
+        list-style: none;
+      }
+
+      .device-spec-list li {
+        position: relative;
+        padding-left: 20px;      
+        margin-bottom: 8px;
+        font-size: 15px;
+        color: #cccccc;
+        line-height: 1.4;
+        text-align: left !important;
+      }
+
+      .device-spec-list li::before {
+        content: "- ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #FFA500;
+        font-weight: bold;
+      }
+
+      .device-footer-note {
+        text-align: left !important;
+        font-size: 14px;
+        font-style: italic;
+        color: #888;
+        line-height: 1.5;
+        border-top: 1px dashed #333;
+        padding-top: 15px;
+        margin-top: 25px;
+      }
+
+      .device-image-container {
+        -ms-flex: 1.2 1 0px;
+        flex: 1.2 1 0px;
+        min-width: 320px;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+
+      .device-img-wrapper {
+        background: #111; 
+        padding: 12px;
+        border: 1px solid #333;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+      }
+
+      .device-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.2s ease; 
+        cursor: zoom-in;
+      }
+
+      .device-image:hover {
+        transform: scale(1.02);
+      }
+
+      .nav-links {
+        margin-top: 30px;
+        text-align: center;
+      }
+      .nav-links p {
+        margin: 8px 0;
+      }
+   /* ==========================================================================
+   Device selector
+   ========================================================================== */         
+      .tech-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 40px auto;
+        max-width: 800px;
+      }
+
+      .tech-item {
+        text-decoration: none; 
+      }
+
+      .tech-item img {
+        width: 180px;
+        height: auto;
+        transition: transform 0.2s ease-in-out; 
+        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
+      }
+
+      .tech-item:hover img {
+        transform: scale(1.1); 
+      }
+   /* ==========================================================================
+   Cards
+   ========================================================================== */
+   .map-selection-container {
+    text-align: center;
+    padding: 20px 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .map-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 260px;
+    margin: 10px;
+    background-color: #242424; 
+    border: 2px solid #3d3d3d;
+    text-align: left;
+    font-family: Tahoma, Verdana, sans-serif;
+    position: relative;
+  }
+
+  .map-card:hover {
+    border-color: #ff9d00; 
+  }
+
+  .map-header {
+    background-color: #3d3d3d;
+    padding: 5px 10px;
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+  }
+
+  .map-body {
+    padding: 15px;
+    height: 85px;
+  }
+
+  .map-name {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff9d00; 
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+
+  .map-name:hover {
+    text-decoration: underline;
+  }
+
+  .map-info {
+    font-size: 12px;
+    color: #cccccc;
+    line-height: 1.4;
+  }
+ .map-desc {
+    font-size: 10px;
+    color: #cccccc;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .map-tag {
+    color: #666;
+  }
 /* ==========================================================================
    Gallery Location Dividers
    ========================================================================== */
@@ -12,7 +232,7 @@
     width: 100%;
     margin: 30px 0 15px 0;
     text-align: left;
-    clear: both; /* Ensures it pushes down past floated images */
+    clear: both;
 }
 
 .location-header {
@@ -21,22 +241,22 @@
     font-size: 22px;
     margin: 0 0 5px 0;
     text-align: left;
-    border-bottom: none; /* Removing default border to use the custom line below */
+    border-bottom: none;
 }
 
 .location-line {
     border: none;
     height: 1px;
-    background: #444; /* Matches your wiki table borders */
+    background: #444;
     margin: 0;
     width: 100%;
 }
    /* ==========================================================================
-   Wiki Release / Project Table
+   Wiki Releases
    ========================================================================== */
 .wiki-release-table {
     width: 100%;
-    border-collapse: collapse; /* Essential for classic IE table styling */
+    border-collapse: collapse;
     margin: 20px 0;
     background-color: #2b2b2b;
     border: 1px solid #444;
@@ -58,7 +278,7 @@
     border-bottom: 1px solid #333;
     color: #cccccc;
     text-align: left;
-    vertical-align: top; /* Keeps text aligned at the top if notes get long */
+    vertical-align: top;
 }
 
 .wiki-release-table tr:last-child td {
@@ -70,7 +290,6 @@
     transition: background-color 0.2s ease;
 }
 
-/* Keeps the year column a bit tighter and stylized */
 .wiki-release-table .year-col {
     width: 10%;
     color: #888;
@@ -78,7 +297,7 @@
     white-space: nowrap;
 }
 /* ==========================================================================
-   426 Error Details & Dropdown
+   New error screen layout
    ========================================================================== */
 .error-details {
     background-color: #0d0d0d;
@@ -107,7 +326,6 @@
     padding-top: 10px;
 }
 
-/* Dropdown Container */
 .error-dropdown {
     margin-bottom: 20px;
     text-align: left; 
@@ -116,7 +334,6 @@
     padding: 12px;
 }
 
-/* The clickable title */
 .error-dropdown summary {
     color: #FFA500;
     cursor: pointer;
@@ -124,16 +341,14 @@
     font-size: 13px;
     font-weight: bold;
     outline: none;
-    list-style: none; /* Hides default triangle in most browsers */
+    list-style: none;
     user-select: none;
 }
 
-/* Hides default triangle in WebKit (Chrome/Safari) */
 .error-dropdown summary::-webkit-details-marker {
     display: none; 
 }
 
-/* Custom [+] icon */
 .error-dropdown summary::before {
     content: "[+] ";
     color: #888;
@@ -141,13 +356,11 @@
     margin-right: 5px;
 }
 
-/* Changes to [-] when dropdown is open */
 .error-dropdown[open] summary::before {
     content: "[-] ";
     color: #ff2200;
 }
 
-/* The revealed text inside */
 .dropdown-content {
     margin-top: 15px;
     border-top: 1px dashed #444;
@@ -208,7 +421,7 @@
     background-color: #1a1a1a;
     border: 1px solid #111;
     margin-right: 15px;
-    display: block; /* IE11 fallback spacing */
+    display: block;
 }
 
 .wiki-quote-meta {
@@ -242,12 +455,11 @@
     margin: 0 0 10px 0;
 }
 
-/* Giant classic quotation mark styling */
 .wiki-quote-text::before {
     content: "\201C"; 
     font-size: 32px;
     color: #555;
-    font-family: "Georgia", serif; /* Georgia provides the best classic quote mark */
+    font-family: "Georgia", serif;
     line-height: 0;
     vertical-align: -10px;
     margin-right: 8px;
@@ -284,7 +496,6 @@
     box-sizing: border-box;
 }
 
-/* Stack them on smaller screens */
 @media screen and (max-width: 750px) {
     .wiki-featured-box {
         width: 100%;
@@ -317,7 +528,6 @@
     text-align: left;
 }
 
-/* Clearfix for the floated image */
 .wiki-featured-content::after {
     content: "";
     display: table;
@@ -334,7 +544,7 @@
     background-color: #1a1a1a;
 }
    /* ==========================================================================
-   Wiki Tracklist (Song List Table)
+   Wiki Tracklist
    ========================================================================== */
 .wiki-tracklist {
     width: 100%;
@@ -378,7 +588,7 @@
     text-align: center !important;
 }
    /* ==========================================================================
-   Wiki Code Block (JSON Snippets)
+   Wiki Code Block
    ========================================================================== */
 pre.wiki-code-box {
     display: block;
@@ -394,10 +604,9 @@ pre.wiki-code-box {
     overflow-x: auto;
     white-space: pre;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 2px 2px 5px rgba(0,0,0,0.3);
-    -ms-overflow-style: scrollbar; /* Keeps scrollbar behaving in IE11 */
+    -ms-overflow-style: scrollbar;
 }
 
-/* Optional: Style inline code to match if you aren't already */
 code.wiki-inline-code {
     background-color: #2b2b2b;
     border: 1px solid #444;
@@ -465,7 +674,7 @@ code.wiki-inline-code {
 }
 
    /* ==========================================================================
-   Notice banner (Wiki)
+   Notice banner
    ========================================================================== */
 .wiki-banner {
     display: -ms-flexbox;
@@ -475,11 +684,9 @@ code.wiki-inline-code {
     background-color: #222;
     border: 1px solid #FFA500;
     border-left-width: 5px; 
-    /* Updated margin to center the banner (top: 0, horizontal: auto, bottom: 20px) */
     margin: 0 auto 20px auto; 
     padding: 10px 15px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    /* Add this to cap the length! */
     max-width: 1100px; 
 }
 
@@ -514,7 +721,7 @@ code.wiki-inline-code {
     text-align: left;
 }
    /* ==========================================================================
-   Category index (Wiki)
+   Category index
    ========================================================================== */
 .wiki-category-section {
     margin-top: 20px;
@@ -1713,13 +1920,11 @@ body.fade-out #vignette {
    Developer Console Tab Width Expansion
    ========================================================================== */
 
-/* Automatically widens the options modal ONLY when Console tab is active */
 #settingsModal:has(#content-dev.active),
 #settingsModal:has(#tab-dev.active) {
     width: 680px !important;
 }
 
-/* Forces the console content and log container to fit the modal */
 #content-dev {
     width: 100% !important;
     min-width: 0 !important;

@@ -12,139 +12,6 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     
-    <style>
-      /* --- DEVICE PAGE CONTAINER --- */
-      .device-container {
-        max-width: 950px;
-        margin: 40px auto;
-        padding: 30px;
-        background-color: #1a1a1a; 
-        border: 1px solid #333;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        box-sizing: border-box;
-      }
-
-      .device-layout {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        margin-left: -20px; /* Counteracts IE11 margin gap padding fallback */
-      }
-
-      /* --- LEFT COLUMN: TEXT & SPECS --- */
-      .device-text {
-        -ms-flex: 1 1 0px;
-        flex: 1 1 0px;
-        min-width: 320px;
-        padding: 0 20px;
-        box-sizing: border-box;
-      }
-
-      .device-text h1 {
-        text-align: left;
-        margin-top: 0;
-        margin-bottom: 15px;
-        color: #fff;
-        border-bottom: 2px solid #333;
-        padding-bottom: 10px;
-      }
-
-      .device-intro {
-        text-align: left !important;
-        font-size: 16px;
-        color: #cccccc;
-        line-height: 1.5;
-        margin-bottom: 25px;
-      }
-
-      .spec-section-title {
-        text-align: left !important;
-        font-size: 14px;
-        text-transform: uppercase;
-        color: #FFA500;
-        margin: 20px 0 10px 0;
-        letter-spacing: 1px;
-        font-weight: bold;
-      }
-
-      /* Overriding global center text safely for lists */
-      .device-spec-list {
-        text-align: left !important;
-        padding: 0;
-        margin: 0 0 25px 0;
-        list-style: none;
-      }
-
-      .device-spec-list li {
-        position: relative;
-        padding-left: 20px;      
-        margin-bottom: 8px;
-        font-size: 15px;
-        color: #cccccc;
-        line-height: 1.4;
-        text-align: left !important;
-      }
-
-      .device-spec-list li::before {
-        content: "- ";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: #FFA500;
-        font-weight: bold;
-      }
-
-      .device-footer-note {
-        text-align: left !important;
-        font-size: 14px;
-        font-style: italic;
-        color: #888;
-        line-height: 1.5;
-        border-top: 1px dashed #333;
-        padding-top: 15px;
-        margin-top: 25px;
-      }
-
-      /* --- RIGHT COLUMN: IMAGES --- */
-      .device-image-container {
-        -ms-flex: 1.2 1 0px;
-        flex: 1.2 1 0px;
-        min-width: 320px;
-        padding: 0 20px;
-        box-sizing: border-box;
-      }
-
-      .device-img-wrapper {
-        background: #111; 
-        padding: 12px;
-        border: 1px solid #333;
-        margin-bottom: 20px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.8);
-      }
-
-      .device-image {
-        display: block;
-        width: 100%;
-        height: auto;
-        transition: transform 0.2s ease; 
-        cursor: zoom-in;
-      }
-
-      .device-image:hover {
-        transform: scale(1.02);
-      }
-
-      /* Navigation Utilities */
-      .nav-links {
-        margin-top: 30px;
-        text-align: center;
-      }
-      .nav-links p {
-        margin: 8px 0;
-      }
-
-    </style>
   </head>
   <body>
   
@@ -205,11 +72,9 @@
       function openFullscreen(src) {
         fullImg.src = src;
         
-        // Use native dialog if supported (Modern browsers)
         if (typeof overlay.showModal === "function") {
           overlay.showModal();
         } else {
-          // IE11 Fallback: Manually inject the fixed positioning
           overlay.style.display = 'flex';
           overlay.style.position = 'fixed';
           overlay.style.top = '0';
@@ -224,15 +89,13 @@
       }
 
       function closeFullscreen(event) {
-        // Clicking the dialog backdrop registers as clicking the dialog itself
         if (event.target === overlay) {
           if (typeof overlay.close === "function") {
             overlay.close();
           } else {
-            // IE11 Fallback cleanup
             overlay.style.display = 'none';
           }
-          fullImg.src = ""; // Clear src to save resources
+          fullImg.src = "";
         }
       }
     </script>

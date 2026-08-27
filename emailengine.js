@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 event.returnValue = false; 
             }
 
-            submitBtn.innerText = "PREPARING TRANSMISSION...";
+            submitBtn.innerText = "SENDING...";
             submitBtn.style.pointerEvents = "none"; 
             statusMessage.innerText = "";
 
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 statusMessage.style.color = "#55ff55";
                 statusMessage.innerText = confirmationText;
-                submitBtn.innerText = "TRANSMIT REPORT";
+                submitBtn.innerText = "SEND";
                 submitBtn.style.pointerEvents = "auto";
                 form.reset();
                 if (clientInfoGroup) {

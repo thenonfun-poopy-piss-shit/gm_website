@@ -18,7 +18,6 @@
       <img src="https://assets-thenonfun.neocities.org/signerror.png" class="gctr" alt="Error">
     </picture>
     
-    <!-- Updated Error Box -->
     <div class="error-details">
       <h1 class="error-heading">404</h1>
       <h2>File not found.</h2>
@@ -36,7 +35,6 @@
 
     <script src="/achivements.js"></script>
     <script>
-      // Original Achievement Logic (Already IE11 safe)
       (function() {
           try {
               if (typeof unlockAchievement === "function") {
@@ -47,14 +45,11 @@
           }
       })();
 
-      // IE11-Compatible Source Engine Error Logic
       document.addEventListener("DOMContentLoaded", function() {
           var fullPath = window.location.pathname;
           
-          // Split the path by '/'
           var pathSegments = fullPath.split('/');
           
-          // Old-school loop to filter out empty strings (IE11 safe)
           var validSegments = [];
           for (var i = 0; i < pathSegments.length; i++) {
               if (pathSegments[i] !== "") {
@@ -66,7 +61,6 @@
           
           var errorElement = document.getElementById("source-error-message");
           if (errorElement) {
-              // Using standard string concatenation instead of backticks
               errorElement.textContent = "'" + fileName + "' cannot be loaded, probably missing from disk/repository.";
           }
       });

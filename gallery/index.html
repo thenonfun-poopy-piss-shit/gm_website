@@ -11,41 +11,6 @@
     <link rel="icon" type="image/x-icon" href="https://thenonfun.neocities.org/images/favicon.ico">
         <script src="https://thenonfun.neocities.org/sounds.js"></script>
     <link href="https://thenonfun.neocities.org/style.css" rel="stylesheet" type="text/css" media="all">
-    
-    <style>
-      /* --- TECH GALLERY STYLES --- */
-      
-      .tech-gallery {
-        display: flex;
-        flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
-        justify-content: center; /* Centers the devices nicely */
-        gap: 30px; /* Space between each device */
-        margin: 40px auto;
-        max-width: 800px; /* Keeps the gallery from getting too wide on huge monitors */
-      }
-
-      .tech-item {
-        /* Removes the default underline/blue color from links */
-        text-decoration: none; 
-      }
-
-      .tech-item img {
-        width: 180px; /* Adjust this to make your devices bigger or smaller */
-        height: auto;
-        /* The transition is what makes the growing effect smooth instead of instant */
-        transition: transform 0.2s ease-in-out; 
-        
-        /* Optional: A drop-shadow filter looks amazing on transparent PNGs/WebPs 
-           because it perfectly hugs the shape of the device instead of making a box */
-        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
-      }
-
-      .tech-item:hover img {
-        /* scale(1.1) means it grows to 110% of its normal size */
-        transform: scale(1.1); 
-      }
-
-    </style>
   </head>
   <body>
      <picture id="mainTitle">
@@ -83,43 +48,35 @@
     (function() {
         var missingFeatures = [];
 
-        // 1. Check ES6 Promises
         if (typeof Promise === "undefined" || Promise.toString().indexOf("[native code]") === -1) {
             missingFeatures.push("ES6 Promises");
         }
 
-        // 2. Check Fetch API
         if (typeof window.fetch === "undefined") {
             missingFeatures.push("Fetch API");
         }
 
-        // 3. Check CSS Variables
         if (!window.CSS || !CSS.supports || !CSS.supports('color', 'var(--fake-var)')) {
             missingFeatures.push("CSS Variables Support");
         }
 
-        // 4. Test modern ES6+ Syntax (async/await and arrow functions)
         try {
             eval("const a = async () => {}; let b = 1;");
         } catch (e) {
             missingFeatures.push("ES6 Syntax Parsing");
         }
 
-        // 5. Check WebP Support
         var canvas = document.createElement('canvas');
         var supportsWebP = false;
         if (!!(canvas.getContext && canvas.getContext('2d'))) {
-            // Checks if the browser can ENCODE to WebP 
             supportsWebP = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
         }
         
-        // EdgeHTML 18 bypass: It can DECODE WebP to view it, but older native Canvas APIs often can't ENCODE it.
         var isEdgeHTML = window.navigator.userAgent.indexOf("Edge/") > -1;
         if (!supportsWebP && !isEdgeHTML) {
             missingFeatures.push("WebP Image Support");
         }
 
-        // Redirect if anything is missing
         if (missingFeatures.length > 0) {
             var errorUrl = "/pcerror.html?missing=" + encodeURIComponent(missingFeatures.join(", "));
             window.location.href = errorUrl;

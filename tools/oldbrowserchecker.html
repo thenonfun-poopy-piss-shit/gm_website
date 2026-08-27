@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Browser Diagnostics</title>
+    <title>title</title>
     <style type="text/css">
         body {
             font-family: Arial, sans-serif;
@@ -25,7 +25,7 @@
         .info-row {
             margin-bottom: 10px;
             line-height: 1.4;
-            word-wrap: break-word; /* Helps keep long User Agents from breaking the layout */
+            word-wrap: break-word;
         }
         .label {
             font-weight: bold;
@@ -46,33 +46,26 @@
     </div>
 
     <script type="text/javascript">
-        // Using window.onload ensures the DOM is ready in older browsers without needing modern event listeners
         window.onload = function() {
             var outputDiv = document.getElementById("output");
             var html = "";
 
-            // Function to safely build a row of info
             function addInfo(label, value) {
-                // If a value is undefined or null, print "Unknown"
                 var displayValue = (value !== undefined && value !== null && value !== "") ? value : "Unknown";
                 return "<div class='info-row'><span class='label'>" + label + ":</span> " + displayValue + "</div>";
             }
-
-            // Core Navigator Properties (Highly supported across generations)
             html += addInfo("User Agent", navigator.userAgent);
             html += addInfo("App Name", navigator.appName);
             html += addInfo("App Version", navigator.appVersion);
             html += addInfo("Platform", navigator.platform);
             html += addInfo("Cookies Enabled", navigator.cookieEnabled);
-            html += addInfo("Language", navigator.language || navigator.userLanguage); // userLanguage is the old IE specific property
+            html += addInfo("Language", navigator.language || navigator.userLanguage);
 
-            // Screen Properties
             if (window.screen) {
                 html += addInfo("Screen Resolution", screen.width + " x " + screen.height);
                 html += addInfo("Color Depth", screen.colorDepth + "-bit");
             }
 
-            // Push the generated HTML into the div
             outputDiv.innerHTML = html;
         };
     </script>

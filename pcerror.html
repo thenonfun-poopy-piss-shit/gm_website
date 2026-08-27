@@ -20,7 +20,6 @@
       <p>Failed to load the page you were looking for, due to your browser not supporting it.</p>  
       <p>Update your browser.</p>
         
-      <!-- ADDED: The missing container for the JavaScript to target -->
       <ul id="dynamic-error-list"></ul>
 
       <code>ERR_BROWSER:OUTDATED</code>      
@@ -32,10 +31,9 @@
     <p>© 2026 The Fun.</p>
     <p><a href="https://thenonfun.neocities.org/legal" class="legal">Legal Disclaimer</a></p>
     
-<script src="/achivements.js"></script> <!-- Load the functions first -->
-<script src="engine.js"></script> <!-- Then run the engine that uses them -->
+<script src="/achivements.js"></script>
+<script src="engine.js"></script>
     
-    <!-- Dynamic Error Reading Script (Retro-Compatible) -->
     <script>
       (function() {
           function getQueryParam(name) {
@@ -53,7 +51,6 @@
           var missingString = getQueryParam('missing');
           var errorList = document.getElementById('dynamic-error-list');
           
-          // This will now work perfectly because the <ul> exists.
           if (errorList) {
               errorList.innerHTML = '';
               
@@ -82,7 +79,6 @@
               }
           }
 
-          // Trigger achievement safely
           try {
               if (typeof unlockAchievement === "function") {
                   unlockAchievement('error_426');
